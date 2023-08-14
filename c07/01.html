@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em/rem</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        #para1{
+            font-size: 6em;
+            /* 16px * 6 = 96px */
+        }
+        #para1 span{
+            font-size: 2em;
+            /* em : 부모기준 (96px * 2 = 192px) */
+        }
+        #para2{
+            font-size: 6rem;
+            /* rem : root 기준(절대좌표 개념-html태그 기준) */
+            /* 16px * 2 = 32 */
+        }
+        #para2 span{
+            font-size: 2rem;
+            /* 부모아니고 html 기준 */
+        }
+    </style>
+</head>
+<body>
+    <h1>상대단위</h1>
+    <h2>em/rem</h2>
+    <p id="para1">대문자 M의 너비를 기준으로 한 단위<br> <span>1em = 약 16px</span></p>
+    <p id="para2">대문자 M의 너비를 기준으로 한 단위<br> <span>1rem = 약 16px</span></p>
+</body>
+</html>

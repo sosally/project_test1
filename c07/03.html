@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vm/vh</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{
+            width: 100vw;
+            background-color: rgb(255, 206, 213);
+        }
+        span{
+            display: block;
+            color: rgb(97, 97, 0);
+        }
+        .per{
+            /* per의 부모인 body의 100% */
+            width: 100%;
+            background-color: lightsalmon;
+        }
+        .per p{
+            width: 50%;
+            background-color: greenyellow;
+        }
+        .per span{
+            /* span의 부모인 per의 100% */
+            width: 100%;
+            background-color: skyblue;
+        }
+        /* !! %는 부모기준 */
+        /* 그러니까 100% 줬다고 다 풀로 차는거 아님 */
+        .vw{
+            width: 50vw;
+            height: 300px;
+            background-color: darkblue;
+        }
+        /* vw 몇퍼센트라고 보면.. ->50vw 50퍼, 100vw 100퍼(이미 설정되있음 그거에 곱하면 되고..) */
+        .vw p{
+            width: 50vw;
+            background-color: tomato;
+        }
+        span{
+            width: 100vw;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div class="per">
+    <p>부모기준 : percent 단위 <span>percent</span></p>
+</div>
+<div class="vw">
+    <p>브라우저 너비기준 <span>vw</span></p>
+</div>
+</body>
+</html>
