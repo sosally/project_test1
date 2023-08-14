@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .three{
+            background-color: lightgreen;
+        }
+        h1+p{
+            background-color: lightcoral;
+        }
+        h1~p{
+            color: brown;
+        }
+        li>b{
+            background-color: lightseagreen;
+        }
+        ul>li>ul>li{
+            color: darkgoldenrod;
+        }
+        ul>li>*{
+            background-color: lightslategrey;
+        }
+        li>*{
+            color: red;
+        }
+        p>*{
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>첫번째</h1>
+    <p>안녕<small>하세요</small></p>
+    <p>두번째 안녕하세요</p>
+    <h2>두번째</h2>
+    <p>반갑습니다</p>
+    <ul>
+        <li>일번
+            <ul>
+                <li>일번-1</li>
+                <li><b>일번-2</b>이랑<b>이것도되나</b></li>
+                <li>일번-3</li>
+            </ul>
+        </li>
+        <li>이번</li>
+        <li class="three">삼번</li>
+        <li>사번</li>
+    </ul>
+    <p>물결이면 얘까지</p>
+</body>
+</html>

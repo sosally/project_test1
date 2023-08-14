@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>둥근 테두리</title> 
+<style>
+    /* 많이 씀! */
+    .radius{
+        background-color: rgb(87, 112, 255);
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+    }
+    .radius1{
+        /* 축약속성 왼모서리부터 시계방향 */
+        border-radius: 100px;
+    }
+    .radius2{
+        width: 200px;
+        border-radius: 100px 100px 0 0;
+        background-color: rgb(255, 127, 255);
+    }
+    .radius3{
+        border-radius: 200px 0 0 0;
+    }
+    .radius4{
+        border-radius: 40px 15px 50px;
+        /* 왼모서리부터 시계방향, 거기서부터 위아래라고 치고 .. */
+        border: 5px dotted #800;
+    }
+    .radius4~*{
+        width: 430px;
+        height: 100px;
+        background-color: pink;
+    }
+    .radius5{
+        /* 가로/세로 */
+        border-radius: 15px/70px;
+    }
+    .radius6{
+        /* 가로길이 / 세로길이 */
+        border-radius: 15px 70px 15px 70px / 70px 15px 70px 15px;
+        border: 2px solid rgb(122, 6, 6);
+    }
+</style>
+</head> 
+<body>
+   <span class="radius radius1">radius1</span>
+   <span class="radius radius2">radius2</span>
+   <span class="radius radius3">radius3</span>
+   <span class="radius radius4">radius4</span>
+   <!-- span.radius.radius5 -->
+   <span class="radius radius5">430x100</span>
+   <span class="radius radius6">430x100</span>
+</body> 
+</html>

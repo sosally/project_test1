@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>숨기기</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+        .box{
+            margin: 10px;
+            border: 1px solid;
+        }
+        .hdd{
+            color: red;
+            /* 화면에서 숨기기1(태그는 살아있음) : 공간도 사라짐 */
+            display: none;
+        }
+        .hdd2{
+            /* color rgba -상속 ㅇ */
+            /* visibility, opacity -상속x */
+            /* display -공간까지 삭제 */
+
+            /* 화면에서 숨기기2 : 불투명도 제어 */
+            /* color: rgba(255, 0, 0, 0); */
+
+            /* 화면에서 숨기기3 : 공간 남기고 숨김 */
+            /* visibility: hidden; */
+
+            /* 화면에서 숨기기4 :  */
+            /* 0.5는 50프로 */
+            /* opacity: 0; */
+
+            /* 화면에서 숨기기5 : 그냥 투명색(많이 씀) */
+            color: transparent;
+        }
+        .box:nth-child(3):hover .hdd2{
+            /* color: rgba(255, 0, 0, 1); */
+            /* visibility: visible; */
+
+            
+            /* opacity: 1; */
+            
+            color: pink;
+        }
+        .box:nth-child(2):hover .hdd{
+            display: inline-block;
+        }
+        /* ~.box .hdd : 다음에 오는 형제 요소중에 .box 하위의 .hdd 를 선택함 */
+        .box:nth-child(1):hover~.box .hdd{
+            display: inline-block;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p><strong>이름 :</strong>홍길동</p>
+        <p><strong>연락처 :</strong>서울 종로구 세검정 </p>
+        
+    </div>
+    <div class="box">
+        <p><strong class="hdd">이름 :</strong>홍길동</p>
+        <p><strong class="hdd">연락처 :</strong>서울 종로구 세검정 </p>
+    </div>
+    <div class="box">
+        <p><strong class="hdd2">이름 :</strong>홍길동</p>
+        <p><strong class="hdd2">연락처 :</strong>서울 종로구 세검정 </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예약문의</title>
+</head>
+
+<body>
+    <h1>예약문의</h1>
+    <form action="#" method="post">
+        <!-- required="required" : 반드시 입력 -->
+        <p>작성자 : <input type="text" name="username" placeholder="작성자를 입력하세요" required="required" autocomplete="on"></p>
+        <p>비밀번호 : <input type="password" name="userpwd" value="userpwd" id="userpwd"></p>
+        <!-- name : 서버에 참조되는 값(데이터베이스 필드값) -->
+        <!-- value : 서버에 저장되는 값(데이터베이스 데이터) -->
+        <!-- id : 화면 디자인용 식별자 -->
+        <p>
+            주민등록번호 : <input type="text" name="useridnum" pattern="\d{6}-\d{7}">
+            <!-- pattern \ d:정수 {}:정수 자릿수 => 정규식 -->
+        </p>
+        <!-- pattern : 입력된 값의 규칙을 검사함 -->
+        <!-- 정규식 : 특정한 규칙을 가지는 문자열의 집합 -->
+        <p>
+            email : <input type="email" name="useremail" autocomplete="on" autofocus="autofocus">
+            <!-- autofocus : 중요한 곳에 포커싱 -->
+            <!-- autocomplete : 최근 검색어 저장 -->
+        </p>
+        <p>
+            연락처 : <input type="tel" name="userphone" autocomplete="off">
+        </p>
+        <p>투숙날짜 : <input type="date" name="userdate"></p>
+        <p>투숙날짜와 시간 : <input type="datetime-local"></p>
+        <p>년월 : <input type="month"></p>
+        <p>주 : <input type="week"></p>
+        <p>시분 : <input type="time"></p>
+        <p>color : <input type="color"></p>
+        <p>인원 : <input type="number"></p>
+        <p>검색 : <input type="search"></p>
+        <p>url : <input type="url"></p>
+        <p>별점 : <input type="range"></p>
+        <p>
+            사진 : <input type="file">
+            <input type="file" multiple="multiple">
+        </p>
+        
+        <ul>
+            <li>
+                <!-- label-input for-id로 연결/ label 과 input 이 떨어질 때 -->
+                <!-- 코딩 컨벤션 -->
+                <!-- 카멜케이스 : 띄어쓰기 대신 중간글자 대문자 -->
+                <!-- 스네이크케이스 : _ -->
+                <!-- 케밥케이스 : - -->
+                <!-- 파스칼케이스 : 시작단어 대문자 -->
+                <label for="SerialNum">시리얼번호입력</label>
+                <input type="text" id="SerialNum">
+                <input type="button" value="이전">
+                <input type="button" value="다음" disabled>
+            </li>
+            <!-- disabled : 사용불가, readonly : 읽기전용(input-text일 경우에만) -->
+            <li>
+                <label for="book">선택한책:</label>
+                <input type="text" id="book" value="반응형웹" readonly>
+                <label for="number">수량:</label>
+                <input type="number" id="number" value="1">
+            </li>
+        </ul>
+        <!-- br 쓰면 css 에서 불편해서 잘 안씀. p로 주로 감싸는 편. -->
+        <hr>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

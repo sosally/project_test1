@@ -1,0 +1,19 @@
+.container{
+    width: 450px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+/* align 교차축 justify 주축 */
+
+/* align-self : 아이템박스에 선언 (얘만 움직일때!!) */
+
+/* 교차축 방향으로 1행일때 (한줄일때) */
+#box1{
+    /* 교차축의 시작지점으로 정렬 */
+    align-self: flex-start;
+}
+#box3{
+    /* 교차축으로 늘림 */
+    align-self: stretch;
+}

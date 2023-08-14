@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="0801.css">
+    <style>
+        body{
+            font-family: inram;
+        }
+        .bold {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-variant: small-caps;
+            font-size: 3em;
+        }
+
+        .all {
+            font: italic small-caps bold 16px/1.4 'Open Sans', sans-serif;
+
+        }
+        .go{
+            
+            font-weight: 800;
+            background-color: lightcoral;
+
+        }
+        li:nth-child(2){
+            font-style: italic;
+            background-color: wheat;
+            font-size: 3rem;
+        }
+        p:nth-child(8){
+            font-family: inram;
+            line-height: 3;
+            font-size: 3em;
+            background-color: rgb(0, 87, 174);
+        }
+        p:nth-of-type(9){
+            font-size: 5vw;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>0801 리뷰</h1>
+    <ul>
+        <li>전체 margin, padding 0 시작</li>
+        <li>border-bottom</li>
+        <li>hsl 각도, 채도, 명도</li>
+    </ul>
+    <div>
+        <p>상대단위, 절대단위</p>
+        <p><span class="material-symbols-outlined">rocket</span>아이콘 넣기</p>
+        <p class="all">link 글씨css파일이 가장 먼저!!</p>
+        <p>font 만 적으면 style 들은 적용 안되네</p>
+        <p class="bold">@charset "UTF-8"; css에</p>
+        <p class="go">em은 폰트 크기가 설정된 가장 가까운 부모의 font-size 기준!(조상 아님)</p>
+        <p>rem(rootem) : root 기준(부모기준 아니라)</p>
+        <p>line-height : 유일하게 단위 안쓰면 n배, %, px 도 가능</p>
+        <p>viewport width/height(vw, vh) : 화면크기에 대응, em : 글씨크기에 대응</p>
+    </div>
+</body>
+
+</html>

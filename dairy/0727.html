@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0727 리뷰</title>
+    <style>
+        a[target=_blank]{
+            text-decoration: none;
+            color: red;
+        }
+        a[title*=조리산업기사]{
+            font-weight: bold;
+        }
+        a[title*=조리]{
+            background-color: yellow;
+        }
+        a[title*=조리산업기사]{
+            background-color: pink;
+            color: white;
+        }
+        a[title*=조리]{
+            background-color: beige;
+            color: white;
+        }
+        a[title^=제과]{
+            background-color: green;
+        }
+        a[title$=기능사]{
+            background-color: violet;
+        }
+       
+        a:visited{
+            color: green;
+        }
+        a:active{
+            color: pink;
+        }
+        a:link{
+            color: rgb(67, 67, 67);
+        }
+        a:hover{
+            color: blue;
+        }
+        .id:focus{
+            background-color: green;
+        }
+        input:hover{
+            background-color: greenyellow;
+        }
+        /* p:before{
+            content:'비포'
+        }
+        p:after{
+            content:'나중'
+        } */
+        .box>p:nth-of-type(2){
+            color: red;
+        }
+        .box>span:nth-child(2){
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>0727 리뷰</h1>
+    <h2>속성 선택자</h2>
+    <h1>속성 선택자 사용하기</h1>
+    <hr>
+    <h2>1번 연습</h2>
+    <h2>조리학부 자격증</h2>
+    <ul>
+        <li><a href="http://www.q-net.or.kr">복어조리기능사</a></li>
+        <li><a href="http://www.q-net.or.kr" target="_blank">양식조리기능사</a></li>
+        <li><a href="http://www.q-net.or.kr" target="_blank">일식조리기능사</a></li>
+        <li><a href="http://www.q-net.or.kr">제과기능장</a></li>
+        <li><a href="http://www.q-net.or.kr" target="_blank">제과기능사</a></li>
+        <li><a href="http://www.q-net.or.kr" target="_blank">제빵기능사</a></li>
+        <li><a href="http://www.q-net.or.kr">조리기능장</a></li>
+        <li><a href="http://www.q-net.or.kr">조리산업기사(복어조리)</a></li>
+        <li><a href="http://www.q-net.or.kr" target="_blank" title="조리산업기사(양식)">조리산업기사(양식)</a></li>
+        <li><a href="http://www.q-net.or.kr" target="_blank" title="조리산업기사(일식)">조리산업기사(일식)</a></li>
+        <li><a href="http://www.q-net.or.kr" target="_blank" title="조리산업기사(중식)">조리산업기사(중식)</a></li>
+        <li><a href="http://www.q-net.or.kr" target="_blank" title="조리산업기사(한식)">조리산업기사(한식)</a></li>
+        <li><a href="http://www.q-net.or.kr">조주기능사</a></li>
+        <li><a href="http://www.q-net.or.kr" title="중식조리기능사">중식조리기능사</a></li>
+        <li><a href="http://www.q-net.or.kr" title="한식조리기능사">한식조리기능사</a></li>
+    </ul>
+    <hr>
+    <h2>2번 연습</h2>
+    <ul>
+		<li><a href="http://www.q-net.or.kr" title="복어조리기능사">복어조리기능사</a></li>
+		<li><a href="http://www.q-net.or.kr" title="조리기능사">조리기능사</a></li>
+		<li><a href="http://www.q-net.or.kr" title="일식조리기능사">일식조리기능사</a></li>
+		<li><a href="http://www.q-net.or.kr" title="제과기능장">제과기능장</a></li>
+		<li><a href="http://www.q-net.or.kr" title="제과기능사">제과기능사</a></li>
+		<li><a href="http://www.q-net.or.kr" title="제빵기능사">제빵기능사</a></li>
+		<li><a href="http://www.q-net.or.kr" title="조리기능장">조리기능장</a></li>
+		<li><a href="http://www.q-net.or.kr" title="조리산업기사(복어조리)">조리산업기사(복어조리)</a></li> 
+		<li><a href="http://www.q-net.or.kr" title="조리산업기사(양식)">조리산업기사(양식)</a></li> 
+		<li><a href="http://www.q-net.or.kr" title="조리산업기사(일식)">조리산업기사(일식)</a></li> 
+		<li><a href="http://www.q-net.or.kr" title="조리산업기사(중식)">조리산업기사(중식)</a></li> 
+		<li><a href="http://www.q-net.or.kr" title="조리산업기사(한식)">조리산업기사(한식)</a></li> 
+		<li><a href="http://www.q-net.or.kr" title="조주기능사">조주기능사</a></li> 
+		<li><a href="http://www.q-net.or.kr" title="중식조리기능사">중식조리기능사</a></li> 
+		<li><a href="http://www.q-net.or.kr" title="한식조리기능사">한식조리기능사</a></li> 
+	</ul>
+    <hr>
+    <h2>3번문제</h2>
+    <ul>
+        <li><a href="#COMPANY">COMPANY</a></li>
+        <li><a href="#PRODUCT">PRODUCT</a></li>
+        <li><a href="#SERVICE">SERVICE</a></li>
+        <li><a href="#CUSTOMER">CUSTOMER</a></li>
+        <li><a href="#COMMUNITY">COMMUNITY</a></li>
+    </ul>
+    <h2>동적 관련 가상 클래스 선택자</h2>
+    <hr>
+    <h3>로그인</h3>
+    <form action="#">
+        <fieldset>
+            <p>아이디 : <input type="text" class="id"></p>
+            <p>비밀번호 : <input type="password"></p>
+        </fieldset>
+    </form>
+    <p>안녕</p>
+    <h4>꼭</h4>
+    <p>:before, :after 은 content: ' ' 입니다..</p>
+    <hr>
+    <div class="box">
+        <p>1. p태그1</p>
+        <span>2. span태그1</span>
+        <p>3. p태그2</p>
+        <span>4. span태그2</span>
+        <p>5. p태그3</p>
+    </div>
+</body>
+</html>

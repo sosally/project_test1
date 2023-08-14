@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동텍스트 줄바꿈</title>
+    <style>
+        ul{
+            width: 200px;
+        }
+        .eng li{
+            /* 영문 줄바꿈 */
+            word-wrap: break-word;
+        }
+        .wrapping li{
+            /* word-break : 모든 언어 줄바꿈 (주로 이거 씀) */
+            word-break: break-all;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="eng">
+        <li>
+            <p>이름 : 홍길동</p>
+        </li>
+        <li>
+            <!-- 블럭 안에 블럭, 띄어쓰기 없으면 단어로 인식을 못함, 줄바꿈 안됨-->
+            <p>이메일 : hongkildong20180101koreapublishing20181231@hanmail.net</p>
+            <p>이페이지는영어로부터커뮤니티에의하여번역되었습니다.MDNWebDocs에서한국커뮤니티에가입하여자세히알아보세요</p>
+        </li>
+    </ul>
+    <ul class="wrapping">
+        <li>
+            <p>이름 : 홍길동</p>
+        </li>
+        <li>
+            <p>이메일 : hongkildong20180101koreapublishing20181231@hanmail.net</p>
+            <p>이페이지는영어로부터커뮤니티에의하여번역되었습니다.MDNWebDocs에서한국커뮤니티에가입하여자세히알아보세요</p>
+        </li>
+    </ul>
+</body>
+
+</html>

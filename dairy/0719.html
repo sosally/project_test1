@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: aquamarine;
+            color: darkslategray;
+        }
+    </style>
+    <link rel="stylesheet" href="./0719(2).css">
+</head>
+<body>
+    <h1>css</h1>
+    <ul>
+        <li>internal 방식 : head 안 style</li>
+        <li>link 방식 : head 안 link <small>css 문서 내 p, body 등..</small></li>
+        <li>inline 방식 : body 안 태그 안</li>
+        <li>@import 방식 : css 안 css 불러오기</li>
+    </ul>
+    <h2 style="background-color: aqua;">기타 태그</h2>
+    <ul>
+        <li>div : 공간표시 (width, height)</li>
+        <li>css 문서에서 ul - list style type : none 불릿 사라짐</li>
+    </ul>
+    <h3>태그 쉽게하기</h3>
+    <ol>
+        <li>p>a</li>
+        <li>p+a</li>
+        <li>ul>(li*3)</li>
+    </ol>
+    <hr>
+    <h2>새로운 태그</h2>
+    <dl>
+        <dt><b>&lt;figure&gt;</b></dt>
+        <dd>figure&gt;figcaption+img <sub>둘은 세트</sub></dd>
+        <dd>figcaption 으로 설명</dd>
+        <dt><b>&lt;map&gt;</b></dt>
+        <dd>img 내 usemap(#), map 하위 area</dd>
+    </dl>
+    <dl>
+        <dt>a태그에서 주소에 #넣으면 id넣은 곳으로 이동함.</dt>
+    </dl>
+    <hr>
+    <h3>과제</h3>
+    <div><img src="../05/usemap.png" alt="" usemap="#room"></div>
+    <map name="room">
+        <area shape="rect" coords="0,0,300,150" href="http://naver.com" alt="">
+        <area shape="rect" coords="300,0,600,300" href="http://daum.net" alt="">
+        <area shape="rect" coords="0,150,300,300" href="http://google.com" alt="">
+    </map>
+</body>
+</html>

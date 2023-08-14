@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0726 리뷰</title>
+    <style>
+        ol li {
+            background-color: aliceblue;
+        }
+
+        p>strong {
+            background-color: rgb(200, 219, 176);
+        }
+
+        h4+p {
+            color: darkcyan;
+        }
+
+        h3~h4 {
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <p><strong>checked</strong> 단독 사용 가능</p>
+    <p>비밀번호/비밀번호확인 은 name 다름</p>
+    <h2>audio/video</h2>
+    <p>controls : 컨트롤바</p>
+    <p>loop 연속재생</p>
+    <p>autoplay시 muted 써야</p>
+    <p>controls : 컨트롤바 보이게</p>
+    <p>호환성 위해 소스 여러개 쓸 수 있음</p>
+    <p>하위 source src="주소"</p>
+    <p>poster : 기본이미지</p>
+    <hr>
+    <h2>자막</h2>
+    <p>track 태그</p>
+    <ul>
+        <li>kind</li>
+        <li>srclang=ko</li>
+        <li>labe=한국어</li>
+        <li>default</li>
+    </ul>
+    <hr>
+    <h3>선택자</h3>
+    
+    <ol>
+        <li>하위선택자(한칸 띄우기) 안 : 요소 <b>안</b>의 항목 다</li>
+        <li>자식선택자(&gt;) 안 : &lt; &gt; 안에 직계 <b>아래</b>것</li>
+        <li>인접선택자(+) 다음 : <b>다음에 오는</b>(포함관계x) 가장 가까운거 하나</li>
+        <li>형제선택자(~) 다음 : 다음(뒤)에 오는 것 모두, 건너뛰어도(포함관계x)</li>
+        <li>&gt;* : 하위 항목 모두(본인 포함x)</li>
+        <li>그룹선택자 , : 여러개 선택</li>
+    </ol>
+    <ul>
+        <li>띄우기, &gt; : 안(포함관계 o)</li>
+        <li>+, ~ : 다음(포함관계 x)</li>
+    </ul>
+    <h3>iframe</h3>
+    <p>보안에 취약, div 감싸기, 높넓이 설정</p>
+    <div>
+        <iframe src="../07/07.html" frameborder="0" width="300" height="300"></iframe>
+    </div>
+    <h4>기타</h4>
+    <p>html 태그 안에서는 width, height시 단위(px..) 쓰면 오류</p>
+    <p>target : 어느 위치에서 열기</p>
+    <p>li 안에 블록태그 가능</p>
+    <hr>
+    <h4>연습</h4>
+    <h5>오디오 연습</h5>
+    <audio controls autoplay muted loop>
+        <source src="../07/media/applause.mp3">
+        <source src="../07/media/applause.ogg">
+        <source src="../07/media/applause.wav">
+    </audio>
+
+</body>
+
+</html>

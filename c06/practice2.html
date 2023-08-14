@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .a{
+            width: 500px;
+            background-color: rgb(196, 196, 196);
+            margin: 0 auto;
+            
+        }
+        .aa{
+            
+            background-color: lightcoral;
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .clearfix:after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+        .aa div{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(219, 196, 255);
+            display: inline-block;
+        }
+        .b{
+            margin-top: 20px;
+        }
+        .b p{
+            background-color: rgb(145, 145, 145);
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            width: 100px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            border-radius: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div class="aa clearfix">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="b">
+            <p>웰컴</p>
+            <p>제품유형</p>
+        </div>
+    </div>
+</body>
+</html>

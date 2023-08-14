@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>float</title>
+    <style>
+        /* float 문제해결 */
+        .mydrink {
+            max-width: 800px;
+
+            padding: 30px;
+            border: 5px solid #bbb;
+            background: #eee;
+
+        }
+
+        /* 방법 1. 부모요소에 width, height 지정
+            가변크기일 경우 문제 발생, 고정크기 쓰기 max-width: 800px; 
+            but, 반응형 안됨
+
+            .mydrink {
+            width: 800px;
+            height: 300px;
+        } */
+
+        /* 방법 2. 빈 형제 요소(블럭!!)를 넣고 clear 시킴
+        but, html코드 길어짐
+
+        .brother {
+            clear: both;
+        } */
+
+        /* 방법 3. 부모에게 clearfix - 많이 씀 
+        .mydrink:after{
+            content:'';
+            clear:both;
+            display: block;
+            블럭으로 꼭! content가 인라인이니..
+        }
+        */
+        
+        /* 방법 4. 클래스로 clearfix 추가 - 제일 많이 씀(clearfix는 이름이지.. html에도 정의해줘야지)
+        .clearfix:after /  .cf:after, /  .cf:before 등...
+        html에서 .clearfix>.greentea로 애초에 감싸거나..
+
+        .clearfix:after{
+            content:'';
+            clear:both;
+            display: block; 혹은 display: table(요지는 블럭속성이면 되니까~)
+        } */
+
+        /* 방법 5. 넘치면 숨겨 - 제일 많이 씀 */
+        .mydrink{
+            overflow: hidden;
+        }
+        
+        h1 {
+            margin: 0 0 10px;
+            text-align: center;
+        }
+
+        p {
+            box-sizing: border-box;
+            padding: 15px 25px;
+            text-align: justify;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .greentea {
+            float: left;
+            width: 47%;
+            border: 3px solid green;
+        }
+
+        .coffee {
+            float: right;
+            width: 47%;
+            border: 3px solid #a50;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 방법4는 mydrink 옆에 clearfix 넣어둔 상태~~ -->
+    <div class="mydrink">
+        <h1>녹차와 커피</h1>
+        <p class="greentea">
+            녹차는 은은한 향을 좋아하는 사람들이 애용하는 차이다. 녹차를 마실 줄 모르는 사람들은 티백들을 모두 뜯어 주전자에 넣고 끊이기도 하는데 강한 차의 향기도 견디기 힘들겠지만 보관도 힘들고
+            그때그때 방금 끓인 듯한 맛을 느끼지 못하게 되며 진한 카페인 덕에 밤에 잠들기도 힘들 것이다.</p>
+        <p class="coffee">
+            커피는 독한 향을 좋아하는 사람도 매우 좋아하며 심한 경우 태어나기 전부터 커피를 마신 듯 강한 중독 증세를 보이는 경우가 많다. 심지어 원두를 씹어서 향에 자신을 담그는 사람도 있고 설탕,
+            시럽 등 다른 조미를 절대로 허락하지 않는 오직 커피맛만을 고집하는 마니아들이 늘고 있다.</p>
+        <!-- <div class="brother"></div> -->
+        <!-- 빈태그 -->
+    </div>
+</body>
+
+</html>

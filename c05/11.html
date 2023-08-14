@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>TRANSITION</title> 
+<style>
+ul li{
+    list-style: none;
+    margin-left: 100px;
+}
+li:nth-child(3){
+    width: 600px;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    background-color: rgb(156, 196, 231);
+    /* 높이 맞추기 3가지 */
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 400px;
+    height: 20px;
+    transform: scale(1);
+    transition: all 1s cubic-bezier(1,-0.68, 0, 1.43);
+    /*  transition - 4가지의 축약속성
+    transition-property: transition의 대상 속성(all..)
+    transition-duration: transition의 지속시간 ms(1/1000)
+    transition-timing-function: transition의 가속도
+    transition-delay: 0s;
+     */
+     /* 주의 : transition을 가상선택자에 넣으면 빠져나올때 적용x */
+}
+ul li a:hover{
+    width: 450px;
+    background-color: #c00;
+    color: rgb(255, 205, 205);
+    transform: scale(1.5) skew(10deg, 5deg);
+    /* all : 전환되는 모든 속성을 1s 동안. 숫자로 변하는 속성값만 인식됨(컬러명은 ㅇㅋ) */
+    
+}
+
+</style>
+</head> 
+<body>
+      <h3>Moving menu</h3>
+      <ul class="menu">
+        <li><a href="#">Company</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Customer Support</a></li>
+        <li><a href="#">Community</a></li>
+      </ul>
+</body>
+</html>

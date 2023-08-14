@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>label</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>label 요소</h1>
+    <form action="#" method="post">
+        <table>
+            <caption>회원가입양식</caption>
+            <colgroup>
+                <col class="1">
+                <col class="2">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">
+                        <label for="id">아이디</label>
+                        <!-- label : input의 이름 (한 세트인지는 label 의 for, input 의 id) -->
+                    </th>
+                    <td>
+                        <input type="text" id="id" title="아이디입력" placeholder="아이디를 입력하세요">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="pw">비밀번호</label>
+                        <!-- label : input의 이름 (한 세트인지는 label 의 for, input 의 id) -->
+                    </th>
+                    <td>
+                        <input type="password" id="pw" title="비밀번호 입력" placeholder="비밀번호를 입력하세요.">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="pw_r">비밀번호재입력</label>
+                    </th>
+                    <td>
+                        <input type="password" id="pw_r" title="비밀번호 재입력" placeholder="비밀번호를 재입력하세요.">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="email">이메일</label>
+                    </th>
+                    <td>
+                        <input type="text" id="email" title="이메일입력">@
+                        <input type="text" title="이메일주소입력">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="hp">핸드폰 번호</label>
+                    </th>
+                    <td>
+                        <!-- id는 한개만 가능, select와 input 둘다 X -->
+                        <select name="hp" id="hp2">
+                            <option>선택</option>
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                        </select>
+                        <input type="text" id="hp2" title="휴대폰 국번입력">-
+                        <input type="text" title="휴대폰 번호입력">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <input type="submit" value="회원가입">
+            <input type="reset" value="취소">
+        </div>
+        <div>
+            <!-- label과 input 묶여야 글자 눌렀을때도 항목 선택 가능 -->
+            <label for="yes">예</label>
+            <input type="radio" name="receive" id="yes">
+            <label for="no">아니오</label>
+            <input type="radio" name="receive" id="no">
+        </div>
+        <div>
+            <!-- label>input 시에는 label에 for 안씀 -->
+            <label>수영<input type="checkbox" name="hobby1"></label>
+            <label>스키<input type="checkbox" name="hobby2"></label>
+            <label>발레<input type="checkbox" name="hobby3"></label>
+        </div>
+    </form>
+</body>
+</html>
+<!-- value 는 필요할 때 추가 -->

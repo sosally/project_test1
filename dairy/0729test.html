@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS 우선순위 연습</title>
+  <style>
+    /* #a {
+      background-color: red;
+      background-color: blue;
+      background-color: green;
+    }
+
+    .b {
+      background-color: magenta;
+    }
+
+    div .c {
+      background-color: yellow;
+      background-color: purple;
+    }
+
+    #d.c {
+      background-color: cyan;
+    }
+
+    .c {
+      background-color: black;
+    }
+
+    #d {
+      background-color: gray;
+    }
+
+    div.c {
+      background-color: orange;
+    }
+
+    #d.c .c {
+      background-color: pink;
+    } */
+    .logo{
+      color: blue;
+    }
+    p[class*="a"]{
+      color: green;
+    }
+    p[class=phone]{
+      color: gray;
+    }
+    p[class^=I]{
+      color: darkgoldenrod;
+    }
+    p[class$=1]{
+      color: violet;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="a" class="b">
+    <p class="c">첫 번째 문장-블랙</p>
+    <p id="d" class="c">두 번째 문장</p>
+    <p id="d" class="c">세 번째 문장</p>
+  </div>
+  <div class="b">
+    <p class="c">네 번째 문장</p>
+    <p class="c">다섯 번째 문장</p>
+    <p class="c">여섯 번째 문장</p>
+  </div>
+  <h4>속성선택자 연습</h4>
+  <h3 class="logo">서울특별시</h3>
+  <h3>경기도</h3>
+  <p class="address">주소록을 작성합니다.</p>
+  <p class="phone">전화번호부를 작성합니다.</p>
+  <p class="health">건강기록부를 작성합니다.</p>
+  <p class="I am U">금전출납부를 작성합니다.</p>
+  <p class="profit-1">손익계산서를 작성합니다.</p>
+  
+</body>
+
+
+</html>

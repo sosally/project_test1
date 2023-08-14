@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>테두리 모양</title>
+    <style>
+        body {
+            background: url(img/bg_grid.png);
+        }
+
+        .brdr {
+            border: 2px solid #ccc;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            width: 500px;
+            margin: 0 auto;
+        }
+        p {
+            width: 120px;
+            width: 94px;
+            display: inline-block;
+            padding: 10px;
+            text-align: center;
+            background-color: cornflowerblue;
+            font: 24px Times;
+            margin: 10px 8px;
+            border-width: 13px;
+            border-color: rgb(177, 131, 33);
+            border-style: solid;
+            
+            border: 13px solid rgb(255, 69, 69);
+            /* 보더 두께 때문에 레이아웃 바뀌면, 컨텐츠 너비를 보더 너비만큼 빼면 됨 */
+        }
+        .p1{
+            border-style: solid;
+        }
+        .p2{
+            border-style: dotted;
+        }
+        .p3{
+            border-style: dashed;
+        }
+        .p4{
+            border-style: double;
+        }
+        .p5{
+            border-style: groove;
+        }
+        .p6{
+            border-style: ridge;
+        }
+        .p7{
+            border-style: inset;
+        }
+        .p8{
+            border-style: outset;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="brdr">
+        <p class="p1">solid</p>
+        <p class="p2">dotted</p>
+        <p class="p3">dashed</p>
+        <p class="p4">double</p>
+        <p class="p5">groove</p>
+        <p class="p6">ridge</p>
+        <p class="p7">inset</p>
+        <p class="p8">outset</p>
+    </div>
+</body>
+
+</html>

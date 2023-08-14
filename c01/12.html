@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cascading(선택자 우선순위)</title>
+    
+    <style>
+        /* 아이디 100 클래스 10 태그 1 */
+        /* 바디의 아이디,클래스는 띄어쓰기 아님! (띄어쓰기는 하위요소) */
+        /* 111 */
+        body#bgPage1.bgPage2{
+            background-color: rgb(251, 205, 255);
+        }
+        /* 101 */
+        body#bgPage1{
+            background-color: rgb(187, 111, 140);
+        }
+        /* 100 */
+        #bgPage1{
+            background-color: skyblue;
+        }
+        /* 10 */
+        .bgPage2{
+            background-color: gray;
+        }
+        /* 1 */
+        body{
+            background-color: #000000;
+            color: white;
+            font-family: "맑은 고딕", dotum, "Times New Roman";
+        }
+        *{
+            color: red;
+        }
+        body *{
+            color: white;
+        }
+        /* 선택자 우선순위 적용 */
+        body>h1{
+            color: red;
+        }
+        /* 작성순서에 따른 적용 */
+        h1{
+            color: lightgoldenrodyellow;
+        }
+        /* 선택자 우선순위를 적용하여 파란색으로 변경 */
+        span{
+            color: #ff0000;
+        }
+        /* 1 10 1 10 */
+        p.bgPage2 span.blueText{
+            color: rgb(124, 236, 158);
+        }
+        /* 1+1+10 */
+        p span.blueText{
+            color: pink;
+        }
+        /* 11 */
+        span.blueText{
+            color: blue;
+        }
+        /* 1 */
+        span{
+            color: red;
+        }
+    </style>
+    
+</head>
+    <body id="bgPage1" class="bgPage2">
+        <!-- 자바스크립트가 와서 조작하면 인라인으로 추후에 들어감. 그외엔 쓰지않기 -->
+        <h1>선택자 우선 순위 알아보기</h1>
+        <hr />
+        <div>
+            <h2>굴 이야기</h2> 
+            <p class="bgPage2">
+                일명 <span class="blueText">석화</span>라고도 하는데 멀리서 보면 따낸 굴조개 껍질이 바위면에 하얗게 붙어있어서 마치 <span class="blueText">꽃무더기</span>를 연상하게 한다. 굴은 <span class="blueText">3대 영양소</span>는 물론 비타민, 미네랄에 이르기까지 풍부한 영양분을 함유하고 있어서 완전식품인 우유와 별로 다를 바가 없다.
+            </p>
+        </div>
+    </body>
+</html>

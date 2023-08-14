@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 블럭태그는 전체 사용, 공간 줄이기 가능 */
+        /* 인라인태그는 컨텐츠만큼만 자기 땅, 공간 조정x(a 태그), 옆으로 배치 */
+        /* 이미지는 크기를 가지며 옆으로 배치-다중이 (정렬시 까다로움) */
+        h1{
+            background-color: lightpink;
+            width: 500px;
+        }
+        img{
+            background-color: lightblue;
+            width: 500px;
+        }
+        a{
+            background-color: yellow;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- alt 3가지 용법 : 스크린 리더기에게 파일 정보 알려줌 -->
+    <!-- 1. 정보 접근성 향상 -->
+    <!-- 2. 검색엔진에 이미지 정보 알려줌 -->
+    <!-- 3. 그림이 없을 때 대체텍스트 -->
+    <!-- 절대경로 : 남의 서버 것 쓸 때만! -->
+    <h1><img src="./images/01.png" alt="코카콜라"></h1>
+    <img src="./images/01.png" alt="코카콜라">
+    <img src="./images/02.png" alt="코카콜라">
+    <img src="https://i.namu.wiki/i/slmFMXb1Fchs2zN0ZGOzqfuPDvhRS-H9eBp7Gp613-DNKi6i6Ct7eFkTUpauqv5HAYR97mrNqrvvcCDEyBdL_g.webp" alt="">
+    <!-- img 는 인라인/블럭! -->
+    <!-- 인라인은 공간을 가지지 x -->
+    <a href="#">인라인태그</a>
+</body>
+</html>

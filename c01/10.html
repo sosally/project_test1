@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* nth-child : 전체에서~ */
+        /* .box의 5번째 자식요소 */
+        /* p중에서 5번째가 아닌 앞 내용 전체에서 5번째 */
+        .box>p:nth-child(5){
+            color: red;
+        }
+        /* p중에서 다섯번째 아님 */
+        p:nth-child(5){
+            color: red;
+        }
+        /* nth-of-type : 요소에서 */
+        /* .box 자식 중 span의 첫번째 */
+        .box>span:nth-of-type(1){
+            background-color: black;
+            color: white;
+        }
+        /* 박스의 네번째 요소를 핑크로 (1.박스 네번째는 span, 2.골라두고 역으로 전체에서 몇번째인지*/
+        .box>span:nth-child(4){
+            color: pink;
+        }
+        /* 박스의 p태그 첫번째를 노랑으로 */
+        .box>p:nth-of-type(1){
+            background-color: yellow;
+        }
+        .box>p:nth-of-type(1):hover+span:before{
+            background-color: aqua;
+            content:'🎁'
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>1. p태그1</p>
+        <span>2. span태그1</span>
+        <p>3. p태그2</p>
+        <span>4. span태그2</span>
+        <p>5. p태그3</p>
+    </div>
+</body>
+</html>

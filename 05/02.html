@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageMap</title>
+    <!-- 자주 쓰진 않지만 좌표체계 이해에 도움 됨. -->
+</head>
+
+<body>
+    <h1>이미지 맵을 이용한 하이퍼링크 연결</h1>
+    <!-- 개발자모드로 사진 크기 확인 -->
+    <!-- usemap : 지도 이름은 ~ -->
+    <!-- 현재 x축, y축, 최종 x축, y축 -->
+    <!-- img 내 usemap, map 하위 area -->
+    <div><img src="./images/banner_map.gif" alt="" usemap="#bannerImg"></div>
+    <map name="bannerImg">
+        <area shape="rect" coords="0,0,100,100" href="http://naver.com" alt="">
+        <area shape="rect" coords="100,100,200,200" href="http://daum.net" alt="">
+        <area shape="rect" coords="100,0,200,100" href="http://google.com" alt="">
+        <area shape="rect" coords="0,100,100,200" href="http://thdud4143.dothome.co.kr" alt="">
+    </map>
+    <div><img src="./usemap.png" alt="" usemap="#room"></div>
+    <map name="room">
+        <area shape="rect" coords="0,0,300,150" href="http://naver.com" alt="">
+        <area shape="rect" coords="300,0,600,300" href="http://daum.net" alt="">
+        <area shape="rect" coords="0,150,300,300" href="http://google.com" alt="">
+    </map>
+    <div><img src="./images/banner_map.gif" alt="" usemap="#banner"></div>
+    <map name="banner">
+        <area shape="rect" coords="" href="" alt="">
+    </map>
+</body>
+
+</html>

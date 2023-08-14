@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0721 리뷰</title>
+    <style>
+    ul li{
+        background-color: aliceblue;
+    }
+    #this{
+        background-color: bisque;
+    }
+    .that{
+        background-color: lightgoldenrodyellow;
+    }
+    *{
+        margin: 10;
+        padding: 1;
+        color: #333;
+        line-height: 1.75;
+        list-style: none;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>0721 리뷰</h1>
+    <h2>form 태그</h2>
+    <p>form>fieldset>legend+input(막음태그x)+select>option</p>
+    <p>전송/취소/클릭 버튼들은 value="전송"</p>
+    <p>이미지 버튼은 input type="image"</p>
+    <form action="#">
+        <fieldset>
+            <legend>다양한 type의 종류</legend>
+            <p>아이디: <input type="text"></p>
+            <p>비밀번호: <input type="password"></p>
+            <p>검색: <input type="search"></p>
+            <p>이메일: <input type="email" placeholder="이메일을 써주세요."></p>
+            <p>전화번호: <input type="tel"></p>
+            <p>컬러: <input type="color"></p>
+            <p>수량: <input type="number" max="10" min="1"></p>
+            <p>만족도: <input type="range" max="10" min="1" value="1"></p>
+            <p>예<input type="radio" name="radio" id=""></p>
+            <p>아니오<input type="radio" name="radio" id=""></p>
+            <p>html<input type="checkbox" name="html" id=""></p>
+            <p>css<input type="checkbox" name="css" id=""></p>
+            <p>javascript<input type="checkbox" name="javascript" id=""></p>
+            <p><input type="submit" value="전송"></p>
+            <p><input type="reset" value="취소"></p>
+            <p><input type="button" value="클릭"></p>
+            <p><input type="image" src="../06/images/btn_gallery.gif" alt="이미지"></p>
+            <p><button>그냥버튼</button></p>
+            <p><input type="file"></p>
+        </fieldset>
+    </form>
+    <hr>
+    <h3>textarea : 막음태그 o, cols rows 자동생성</h3>
+    <form action="#">
+        <fieldset>
+            <legend>회원가입</legend>
+            <p>가입목적: <br> <textarea name="" id="" cols="30" rows="10"></textarea></p>
+            <p>전화번호:
+                <select name="" id="">
+                    <option value="">--지역번호를 선택하세요--</option>
+                    <option value="seoul">02</option>
+                    <option value="gyeonggi">031</option>
+                </select>
+                <input type="tel" placeholder="전화번호를 입력하세요.">
+            </p>
+
+        </fieldset>
+    </form>
+    <hr>
+    <h3>thead 없이 tbody로 감싸고, 그 안에서 th, td로 진한글씨 나누기</h3>
+    <p>th에 그냥 항목이 아닌 scope와 label</p>
+    <form action="#">
+        <table>
+            <caption>회원가입 양식</caption>
+            <colgroup>
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">
+                        <label for="id0">아이디</label>
+                    </th>
+                    <td><input type="text" placeholder="아이디를 입력하세요" id="id0"></td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="pw0">비밀번호</label>
+                    </th>
+                    <td><input type="password" placeholder="비밀번호를 입력하세요" id="pw0"></td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="pw1">비밀번호 재입력</label>
+                    </th>
+                    <td><input type="password" placeholder="비밀번호를 재입력하세요" id="pw1"></td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="email">이메일</label>
+                    </th>
+                    <td><input type="text">@ <input type="text"></td>
+                </tr>
+                <tr>
+                    <th>핸드폰 번호</th>
+                    <td>
+                        <select name="" id="">
+                            <option value="">선택</option>
+                            <option value="">010</option>
+                            <option value="">011</option>
+                        </select>
+                        <input type="text">- <input type="text">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <input type="submit" value="회원가입">
+            <input type="reset" value="취소">
+        </div>
+        <hr>
+        <div>
+            <h3>label+input 시 for와 id로 묶여야 항목 선택편함</h3>
+            <label for="yes">예</label>
+            <input type="radio" name="go" id="yes">
+            <label for="no">아니오</label>
+            <input type="radio" name="go" id="no">
+        </div>
+        <hr>
+        <div>
+            <h3>label>input시 label for 안씀</h3>
+            <label>수영<input type="checkbox" name="hobby01"></label>
+            <label>스키<input type="checkbox" name="hobby02"></label>
+            <label>발레<input type="checkbox" name="hobby03"></label>
+        </div>
+    </form>
+    <hr>
+    <h2>style 기타</h2>
+    <ul>
+        <li>id - #</li>
+        <li>class - .</li>
+        <li>ul li - 하위요소 한칸 띄우기</li>
+    </ul>
+    <hr>
+    <h3>다양한 태그 선택자</h3>
+    <ul>
+        <li id="this">아이디 선택자</li>
+        <li class="that">아이디는 중복x</li>
+        <li>아이디는 문서에 하나만</li>
+        <li class="so">태그에 .붙여서 class 자동생성</li>
+        <li id="young">태그에 #붙여서 id 자동생성</li>
+        <div class="li">.태그로 div 자동생성</div>
+    </ul>
+    <h4>기타</h4>
+    <p><input type="submit" value="버튼"></p>
+    <p>버튼 input에는 value에 이름 붙이기</p>
+    <p><button>그냥버튼</button></p>
+    <p>그냥 버튼은 태그 사이에 이름 붙이기</p>
+</body>
+</html>

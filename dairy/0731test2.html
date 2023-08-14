@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0731과제</title>
+    <style>
+        
+        li:active{
+            color:red
+        }
+        #container1{
+            width: 150px;
+            border: 5px solid green;
+        }
+        #container2{
+            width: 150px;
+            border: 5px solid pink; 
+        }
+        
+        
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .green{
+            background-color: green;
+        }
+        .red, .blue, .green{
+            color: white;
+        }
+        
+        ul{
+            list-style: none;
+            line-height: 140%;
+            padding-left: 10%;
+            /* margin-top: 0; */
+        }
+        p{
+            margin-left: 10%;
+            margin-bottom: 0;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(199, 199, 199);
+        }
+        /* a:visited{
+            color: black;
+        } */
+        a:hover{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <p><img src="./Untitled(3).png" alt="카테고리"></p>
+        <hr>
+        <ul>
+            
+            <li><a href="#a">밥/죽/면</a></li>
+            <li><a href="#a">매일 반찬</a></li>
+            <li><a href="#a">국/찌게/전골</a></li>
+            <li><a href="#a">가족/초대요리</a></li>
+            <li><a href="#a">소스/양념장</a></li>
+            <li><a href="#a">간식/음료</a></li>
+            <li><a href="#a">기타</a></li>
+        </ul>
+    </div>
+    <br>
+    <div id="container2">
+        <p><img src="./menu1.png" alt="게시판"></p>
+        <ul id="white">
+            <li><a href="#" class="red">자유 게시판</a></li>
+            <li><a href="#" class="blue">회원 장터</a></li>
+            <li><a href="#" class="green">나만의 레시피</a></li>
+            <li><a href="#" class="green">불후의 레시피</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

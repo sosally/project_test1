@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 아무것도 없으면 크기 설정해야 배경 들어감! */
+        .who{
+            height: 150px;
+            margin-bottom: 10px;
+            /* 컬러, url 순서 상관x */
+            background: #67758e url(./img/bg_size.png) no-repeat;
+        }
+        /* 백그라운드 사이즈.. : 1)px은 딱 그 크기, 2)%는 전체공간에서의 차지비율 */
+        .who1{
+            /* 속성 두개 적용 : width height */
+            background-size: 100px 200px;
+            background-position: center;
+        }
+        .who2{
+            /* 속성 한개 작성 : width 50px, height는 가로기준 auto */
+            background-size: 50px;
+        }
+        .who3{
+            background-size: 80% 150%;
+        }
+        .who4{
+            /* 1) cover(가로/두루마리) : 요소의 너비에 배경을 맞춤 -주로 많이 씀 */
+            background-size: cover;
+        }
+        .who5{
+            height: 500px;
+            /* 2) contain(세로) : 요소의 높이에 배경을 맞춤 */
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <!-- 클래스 이름 두개시 띄어쓰기 -->
+    <div class="who who1"></div>
+    <div class="who who2"></div>
+    <div class="who who3"></div>
+    <div class="who who4"></div>
+    <div class="who who5"></div>
+</body>
+</html>

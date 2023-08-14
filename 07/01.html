@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div</title>
+    <style>
+        div {
+            background-color: rgb(189, 218, 218);
+        }
+
+        a {
+            background-color: bisque;
+        }
+
+        span {
+            background-color: blue;
+        }
+
+        .header {
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        .section {
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        .footer {
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        header {
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        section {
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        footer {
+            width: 300px;
+            border: 1px solid black;
+        }
+        /* alt 누르며 콕 콕, 멀티커서 */
+    </style>
+</head>
+
+<body>
+    <!-- div+a+span 옆으로 붙으면 인라인 -->
+    <!-- 배경 컨텐츠 너비만 쓰면 인라인, 한줄 다 쓰면 블럭 -->
+    <!-- 블럭은 블럭 포함 안됨(div만 가능), 블럭은 인라인 포함 가능, 인라인은 블럭 포함 안됨, 인라인은 인라인 포함 가능 -->
+    <div>
+        의미 없는 콘텐츠를 감쌀 때 씀, 디자인시 영역 잡을 때.
+        <h1>div는 유일하게 블럭 포함 가능</h1>
+    </div>
+    <div class="header">header div</div>
+    <div class="section">section div</div>
+    <div class="footer">footer div</div>
+    <!-- .뭐시기 (div class="뭐시기") -->
+
+    <!-- semantic 태그 -->
+    <header>header 시멘틱</header>
+    <section>
+        <!-- section은 html을 가져야 -->
+        <h2>타이틀2</h2>
+        section 시멘틱
+    </section>
+    <footer>footer 시멘틱</footer>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        body>*{
+            width: 900px;
+            padding: 20px;
+            background-color: rgb(130, 194, 153);
+            text-align: center;
+            margin: auto;
+        }
+        header{
+            display: flex;
+            height: 200px;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        h1{
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            background-color: lightblue;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            width: 600px;
+            justify-content: center;
+        }
+        li{
+            width: 70px;
+            height: 60px;
+            line-height: 60px;
+            
+        }
+        #container{
+            display: flex;
+            justify-content: space-between;
+        }
+        section{
+            background-color: aliceblue;
+            width: 300px;
+            height: 300px;
+            line-height: 300px;
+        }
+        section+div{
+            display: flex;
+            flex-direction: column;
+        }
+        section+div>*{
+            height: 190px;
+            width: 200px;
+            background-color: aliceblue;
+        }
+        footer>*{
+            background-color: aliceblue;
+            width: 600px;
+            padding: 5px;
+            margin-left: 100px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="#">반응형웹</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <div id="container">
+        <section>
+            <h2>콘텐츠 그룹01</h2>
+        </section>
+        <section>
+            <h2>콘텐츠 그룹02</h2>
+        </section>
+        <div>
+            <article>
+                <h2>주요기사</h2>
+
+            </article>
+            <aside>광고</aside>
+        </div>
+    </div>
+    <footer>
+        <address>경기도 부천시 오정구 삼정동 032)674-5685 icoxpub@naver.com</address>
+        <p>COPYRIGHT © All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

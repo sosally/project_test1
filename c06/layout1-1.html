@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .cf::after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+        .fl{
+            float: left;
+        }
+        /* 제일 중요! 너비(max도 ㄱㅊ) + 마진 으로 중앙 맞춰야함 */
+        /* 겹치면 반응형 안됨. 밀어내야 반응형
+        마진은 밀림, 포지션은 겹침(크기를 제대로 못읽는) */
+        .inner{
+            max-width: 500px;
+            margin: auto;
+            background-color: rgb(119, 119, 119);
+        }
+        header{
+            background-color: red;
+            /* 글씨, 즉 컨텐츠가 있으니 너비 안줘도 ㅇㅋ */
+        }
+        main{
+            background-color: lightblue;
+        }
+        section{
+            width: 300px;
+            background-color: lightyellow;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <!-- 전체를 감싸는 .wrap !! -->
+    <div class="inner">
+        <header>header</header>
+        <main class="cf">
+            <nav class="fl">nav</nav>
+            <section class="fl">section</section>
+            <aside class="fl">aside</aside>
+        </main>
+        <footer>footer</footer>
+    </div>
+</body>
+
+</html>
+
+<!-- .wrap>header+(main.cf>nav.fl+section.fl+aside.fl)+footer -->

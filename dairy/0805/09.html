@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid;
+            margin: 10px;
+            padding-left: 10px;
+        }
+        .hdd{
+            display: none;
+        }
+        .hdd2{
+            color: transparent;
+        }
+        .box2:hover .hdd{
+            display: inline;
+        }
+        .box3:hover .hdd2{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p><strong>이름 :</strong>홍길동</p>
+        <p><strong>연락처 :</strong>서울 종로구 세검정 </p>
+    </div>
+   <div class="box2">
+        <p><strong class="hdd">이름 :</strong>홍길동</p>
+        <p><strong class="hdd">연락처 :</strong>서울 종로구 세검정 </p>
+    </div>
+   <div class="box3">
+        <p><strong class="hdd2">이름 :</strong>홍길동</p>
+        <p><strong class="hdd2">연락처 :</strong>서울 종로구 세검정 </p>
+    </div>
+</body>
+</html>

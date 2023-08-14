@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0724 리뷰</title>
+    <style>
+        fieldset{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- css는 브라우저에서 복붙이 편함. -->
+    <!-- copy declaration -->
+    <h1>0724 리뷰</h1>
+    <p><b>name은 꼭 쓰자. id는 디자인 편의상.</b></p>
+    <p>name : 서버에 참조되는 값(데이터베이스 필드값)</p>
+    <p>value : 서버에 저장되는 값(데이터베이스 데이터)</p>
+    <p>id : 화면 디자인용 식별자</p>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>예약문의 창</legend>
+            <p>작성자 : <input type="text" name="username" placeholder="작성자를 입력하세요." required="required" autocomplete="on"></p>
+            <ul>
+                <li>required="required" 필수입력</li>
+                <li>autocomplete="on"</li>
+                <li>autofocus="autofocus"</li>
+            </ul>
+            <p>비밀번호 : <input type="password" name="userpwd" value="userpwd"></p>
+            <p>주민등록번호 : <input type="text" name="useridnum" pattern="\d{6}-\d{7}"></p>
+            <p><small>pattern="\d{6}-\d{7}"</small></p>
+            <ul>
+                <li>pattern : 입력된 값의 규칙 검사</li>
+                <li>pattern=\d{숫자}-\d{숫자}</li>
+                <li>d:정수, {}:정수 자릿수</li>
+            </ul>
+            <p>연락처 : <input type="tel" name="userphone" autocomplete="off"></p>
+            <p>날짜 : <input type="date"></p>
+            <p>날짜 시간(datetime-local) : <input type="datetime-local"></p>
+            <p>년월 : <input type="month"></p>
+            <p>주 : <input type="week"></p>
+            <p>시분 : <input type="time"></p>
+            <p>color : <input type="color"></p>
+            <p>숫자(number, 주로 value 1) : <input type="number"></p>
+            <p>검색 : <input type="search"></p>
+            <p>url : <input type="url"></p>
+            <p>정도(range) : <input type="range"></p>
+            <p>파일업로드 : <input type="file"></p>
+            <p>파일 여러개 업로드(multiple="multiple") : <input type="file" multiple="multiple"></p>
+        </fieldset>
+    </form>
+    <hr>
+    <form action="#">
+        <fieldset>
+            <p>안눌리는 버튼(disabled만 붙이기) : <input type="button" value="안눌려" disabled></p>
+            <p>읽기전용 텍스트상자(input-text만) : <input type="text" value="읽기전용임" readonly></p>
+        </fieldset>
+    </form>
+    <h4>기타</h4>
+    <p>br은 css 불편해서 잘 안씀, p로 감싸기</p>
+    <hr>
+    <h2>똑같이 연습</h2>
+    <form action="#">
+        <fieldset>
+            <legend>예약문의</legend>
+            <p>작성자 : <input type="text" placeholder="작성자를 입력하세요"></p>
+            <p>비밀번호 : <input type="password"></p>
+            <p>주민등록번호 : <input type=text pattern="\d{6}-\d{7}"></p>
+            <p>email : <input type="email"></p>
+            <p>연락처 : <input type=text pattern="\d{3}-\d{4}-\d{4}"></p>
+            <p>투숙날짜 : <input type="date"></p>
+            <p>투숙날짜와 시간 : <input type="datetime-local"></p>
+            <p>년월 : <input type="month"></p>
+            <p>주 : <input type="week"></p>
+            <p>시분 : <input type="time"></p>
+            <p>색 : <input type="color"></p>
+            <p>인원 : <input type="number"></p>
+            <p>검색 : <input type="search"></p>
+            <p>url : <input type="url"></p>
+            <p>별점 : <input type="range"></p>
+            <p>사진파일 : <input type="file"></p>
+            <p>사진파일 여러개 : <input type="file" multiple="multiple"></p>
+            <ul>
+                <li>시리얼번호입력 : <input type="text" required></li>
+                <li>선택한 책 : <input type="text" value="기본값" readonly></li>
+            </ul>
+        </fieldset>
+    </form>
+    <hr>
+    <h2>이력서 재연습</h2>
+    <table>
+        <tr>
+            td
+        </tr>
+    </table>
+</body>
+</html>

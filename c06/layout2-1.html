@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 플롯주면 부모cf 꼭이다~ */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .cf::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        h1{
+            opacity: 0.8;
+        }
+        .inner{
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: antiquewhite;
+        }
+        header, footer{
+            background-color: aquamarine;
+        }
+
+        section{
+            background-color: rgb(205, 169, 50);
+            width: 300px;
+        }
+        ul li{
+            list-style: none;
+        }
+        h1, ul{
+            background-color: yellow;
+        }
+        .pad1 li{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .pad2 li{
+            margin-left: 5px;
+            margin-right: 5px;
+            background-color: rgb(94, 150, 10);
+        }
+        
+    </style>
+</head>
+<!-- content = html 태그 사이에 작성하는 것 = 웹페이지에서 보이는 것 = 글자 !! -->
+<body>
+    <div class="inner">
+        <header class="cf">
+            <h1 class="fl">logo</h1>
+            <ul class="pad1 fr">
+                <li class="fl"><a href="#">test</a></li>
+                <li class="fl"><a href="#">test</a></li>
+                <li class="fl"><a href="#">test</a></li>
+                <li class="fl"><a href="#">test</a></li>
+            </ul>
+        </header>
+        <main class="cf">
+            <nav class="fl">
+                <ul class="pad2">
+                    <li class="fl"><a href="#">m1</a></li>
+                    <li class="fl"><a href="#">m1</a></li>
+                    <li class="fl"><a href="#">m1</a></li>
+                </ul>
+            </nav>
+            <section class="fl">section</section>
+            <aside class="fl">aside</aside>
+        </main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
+</html>

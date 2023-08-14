@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기본박스</title>
+  <link rel="stylesheet" href="css/common.css">
+  <!-- <link rel="stylesheet" href="css/01.css"> -->
+  <link rel="stylesheet" href="css/02.css">
+</head>
+<!-- (개행-줄바꿈 되니..)
+  줄바꿈은 큰 화면에서 콘텐츠 디자인시 이 점이 비효율적임. -> 블럭요소 옆으로 배치하도록 돕는 css 속성
+  
+  레이아웃 : 블럭 좌우배치
+  1. (속성)float : none | left | right
+  2. (속성)position : relative | absolute | sticky | fixed
+
+  [display : 브라우저 화면의 가시성을 제어하는 값을 가짐.]
+  3. (속성)display : (값)inline-block | table | flex(반응형 레이아웃에 최적화-알아서 다꾸겨집어넣음) | grid
+  flex와 grid는 박스의 정렬을 위해 나옴. 가장 최근에 나옴.
+  
+-->
+
+<body>
+  <div class="container" id="opt1">
+    <div class="box">
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+      <p>4</p>
+      <p>5</p>
+    </div>
+    <div class="box">
+      <p>2</p>
+    </div>
+    <div class="box">
+      <p>3</p>
+    </div>
+  </div>
+  <div class="container" id="opt2">
+    <div class="box">
+      <p>1</p>
+    </div>
+    <div class="box">
+      <p>2</p>
+    </div>
+    <div class="box">
+      <p>3</p>
+    </div>
+  </div>
+  <div class="container" id="opt3">
+    <div class="box">
+      <p>1</p>
+    </div>
+    <div class="box">
+      <p>2</p>
+    </div>
+    <div class="box">
+      <p>3</p>
+    </div>
+  </div>
+  <div class="container" id="opt4">
+    <div class="box">
+      <p>1</p>
+    </div>
+    <div class="box">
+      <p>2</p>
+    </div>
+    <div class="box">
+      <p>3</p>
+    </div>
+  </div>
+</body>
+
+</html>

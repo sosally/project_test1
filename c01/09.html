@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-letter{
+            font-size: 150%;
+        }
+        p:first-child{
+            color: blue;
+        }
+        p:last-child{
+            color: red;
+        }
+        /* 그나마 얘 씀 */
+        p:nth-child(3){
+            color: rgb(250, 143, 131);
+        }
+        p{
+            background-color: aliceblue;
+        }
+        /* 많이 쓰는 애들 */
+        /* :before -> p 컨텐츠 안에서 가장 앞 (태그 안에 자식으로 추가!)(드래그 안됨)*/
+        /* : 하나 해도 되고, :: 두개도 */
+        /* width 안됨, 인라인 */
+        p:before{
+            content:'💎';
+        }
+        p:after{
+            content: '추가';
+            font-size: 8px;
+            color: blueviolet;
+            background-color: rgb(255, 221, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>: (콜론) -> 가상선택자</h1>
+    <!-- :hover -->
+    <div class="box">
+        <p>COMPANY</p>
+        <p>PRODUCT</p>
+        <p>SERVICE</p>
+        <p>COMMUNITY</p>
+    </div>
+</body>
+
+</html>

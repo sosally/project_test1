@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+            margin: 5px;
+        }
+        li a{
+            text-decoration: none;
+            font-family: "Times New Roman", Times, serif;
+            color: #ffffb2;
+            display: block;
+            /* background: #999; -컬러 지정해도 아래 사진과 중복이라 취소 됨*/
+            padding-left: 30px;
+            /* .. 배경과 url 다 쓸경우 컴마 아니고 한칸띄기 */
+            background: #666 url(./img/bg_sprite.png) no-repeat;
+            /* 
+            background-image
+            background-color
+            background-repeat
+            background-position
+            background-attachment
+
+            다 쓰고 아래에 background 축약속성 쓰면 위에거 날아가요~
+            */
+            background-size: 26px;
+            font-size: 25px;
+        }
+        
+        .lnb li:nth-child(1) a{
+            /* transition-hover에 쓰면 안됨! */
+            transition: all 0.5s;
+            /* ...position -값은 그 방향으로 앞으로 이동 */
+            background-position: 0 0;
+        }
+        .lnb li:nth-child(2) a{
+            transition: all 1s;
+            background-position: 0 -50px;
+        }
+        .lnb li:nth-child(3) a{
+            transition: all 1.5s;
+            background-position: 0 -100px;
+        }
+        .lnb li:nth-child(4) a{
+            transition: all 2s;
+            background-position: 0 -150px;
+        }
+        .lnb li:nth-child(1) a:hover{
+            background-position: 0 -50px;
+        }
+        .lnb li:nth-child(2) a:hover{
+            background-position: 0 -100px;
+        }
+        .lnb li:nth-child(3) a:hover{
+            background-position: 0 -150px;
+        }
+        .lnb li:nth-child(4) a:hover{
+            background-position: 0 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 더 빠른 페이지의 로딩속도를 구현하기 위해 -->
+    <h1>sprite image</h1>
+    <ul class="lnb">
+        <li><a href="#">Theater</a></li>
+        <li><a href="#">Secret Garden</a></li>
+        <li><a href="#">Concert Hall</a></li>
+        <li><a href="#">Animal Farm</a></li>
+    </ul>
+</body>
+</html>

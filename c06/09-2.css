@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    background-color: lightpink;
+}
+.inner_wrap{
+    background-color: rgb(255, 83, 255);
+    width: 1180px;
+    margin: auto;
+    position: relative;
+    height: 300px;
+}
+h1{
+    /* 부모 안에 갇혀서 제어해야하는 애들에게 쓰자!!! */
+    /* absolute만 !! position가진 부모 기준으로 0점 바뀜! -부모 relative니까 부모 박스 안에서 이제 시작이겠지 */
+    /* 부모만 제어하고 안에 애들 따라오게 하려고 */
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background-color: rgb(71, 255, 184);
+    
+}
+h2{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-color: rgb(71, 255, 184);
+    
+}

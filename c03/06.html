@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>말줄임 기호</title> 
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul li{
+        list-style-type: none;
+    }
+    /* 파란색에 밑줄은 a가 가진 속성!! 그러니 a 를 바꿔야.. */
+    /* a는 인라인, h3는 블럭이라 개발자모드에선 h3이 잡힘 */
+    a{
+        text-decoration: none;
+        color: darkblue;
+        /* css 적으로 가시성 변경 */
+        display: block;
+        /* margin은 블럭에만 되지만, 위에 디스플레이 설정을 통해 마진 사용 가능! */
+        margin: 10px;
+    }
+    .notice a .h3{
+        width: 200px;
+        border: 1px solid;
+        /* nowrap : 줄바꿈 안하게 만들고 */
+        white-space: nowrap;
+        /* 넘치는 컨텐츠에 대한 처리 */
+        /* 넘치면 스크롤 */
+        overflow: scroll;
+        /* 넘치면 숨겨 */
+        overflow: hidden;
+        /* 말줄임표 : 
+        너비, 줄바꿈x, 넘치면 숨김, 말줄임표 - 4개 있어야 ...됨
+        width(인라인은 안먹는거 알죠?), white-space:nowrap, overflow: hidden, text-overflow:ellipsis 필수! */
+        text-overflow: ellipsis;
+    }
+    .notice a .multi{
+        width: 200px;
+        border: 1px solid;
+        display: -webkit-box;
+        /* 몇줄마다 자를지 */
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+</style>
+</head> 
+<body>
+   <ul class="notice">
+       <li><a href="#">
+            <h3 class="h3">시간 배분을 위하여 현명한 판단을 바랍니다. </h3></a></li>
+       <li><a href="#">
+            <h3>욕심껏 내용을 채우는 것도 좋겠습니다. </h3></a></li>
+       <li><a href="#">
+            <h3 class="multi">결과물을 볼 수 있어야 하는 것이 우선입니다. 결과물을 볼 수 있어야 하는 것이 우선입니다. 결과물을 볼 수 있어야 하는 것이 우선입니다. 결과물을 볼 수 있어야 하는 것이 우선입니다. 결과물을 볼 수 있어야 하는 것이 우선입니다. 결과물을 볼 수 있어야 하는 것이 우선입니다. 결과물을 볼 수 있어야 하는 것이 우선입니다.</h3></a></li>
+   </ul>
+</body> 
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: cornflowerblue;
+            width: 500px;
+            height: 500px;
+            position: relative;
+            left: 50%;
+            /* 
+            position주고나서
+            1)margin-left,top 2)transform-translateX/Y(-px) */
+            /* margin-left: -250px; */
+            /* 자기 몸 절반만큼 다시 이동 */
+            transform: translateX(-250px);
+
+            /* 수직은 퍼센트 불가 top: 50%; */
+            /* %는 부모에 비해서~ */
+            /* body의 높이는 무한정이니, 수직은 불가 */
+            /* max 값 있어야 정렬 */
+        }
+
+        .container2 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            left: 50%;
+            transform: translateX(calc(-300px / 2));
+            background-color: lightblue;
+        }
+
+        .box0 {
+            width: 100px;
+            height: 100px;
+            background-color: lightseagreen;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(calc(-100px / 2), calc(-100px / 2));
+        }
+
+        .box1 {
+            background-color: yellow;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 50%;
+            /* margin-left: -25px; */
+            top: 50%;
+            /* margin-top: -25px; */
+
+            /* calc 계산. 사칙연산 가능. 연산자 사이 공백 !! %끼리 연산x */
+            transform: translate(calc(-50px / 2), calc(-50px / 2));
+            /* transform: translateX(calc(-50px / 2)), translateY(calc(-50px / 2)); */
+
+            /* transform은 아래 또 입력하면 아래걸로 되니 한번에 여러개 x,y */
+        }
+
+        /* float와 absolute 같이 쓰지 말기!! 둘다 비슷한 효과니.. */
+        .container3 {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            left: 50%;
+            transform: translateX(calc(-500px / 2));
+            background-color: rgb(182, 230, 173);
+        }
+
+        .box5 {
+            width: 250px;
+            height: 250px;
+            background-color: lightsalmon;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(calc(-250px / 2), calc(-250px / 2));
+        }
+
+        .container4 {
+            width: 600px;
+            height: 600px;
+            background-color: lightgoldenrodyellow;
+            position: relative;
+            left: 50%;
+            transform: translateX(calc(-600px / 2));
+        }
+
+        .box6 {
+            width: 400px;
+            height: 300px;
+            background-color: rgb(117, 126, 255);
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(calc(-400px / 2), calc(-300px / 2));
+
+        }
+
+        .container5 {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(255, 240, 107);
+            position: relative;
+            left: 50%;
+            transform: translateX(calc(-500px / 2));
+        }
+
+        .box7 {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translate(calc(-30px / 10), calc(-30px / 2));
+            font-size: 2em;
+            line-height: 30px;
+        }
+
+        .box8 {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translate(calc(30px / 10), calc(-30px / 2));
+            font-size: 2em;
+            line-height: 30px;
+        }
+
+        .inner{
+            width: 800px;
+            height: 800px;
+            background-color: #fff;
+            position: relative;
+            left: 50%;
+            transform: translate(calc(-800px / 2));
+        }
+        .container6 {
+            background-color: lightskyblue;
+            width: 500px;
+            height: 500px;
+            margin-top: 100px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(calc(-500px / 2));
+
+        }
+
+        .box9,
+        .box10,
+        .box11 {
+            width: 30px;
+            height: 30px;
+            font-size: 2em;
+        }
+        .box9{
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            transform: translate(calc(-30px / 2), calc(-30px / 2));
+        }
+        .box10{
+            position: absolute;
+            right: 10%;
+            top: 10%;
+            transform: translate(calc(-30px / 2), calc(-30px / 2));
+        }
+        .box11{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(calc(-30px / 2), calc(-30px / 2));
+        }
+    </style>
+</head>
+<!-- 글자를 감싸는 공간 정렬 -->
+<!-- 글자는 line-height로 수직중앙정렬 -->
+
+<body>
+    <div class="container">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+    </div>
+    <div class="container2">
+        <div class="box0">box0</div>
+    </div>
+    <div class="container3">
+        <div class="box5">box1</div>
+    </div>
+    <div class="container4">
+        <div class="box6">box1</div>
+    </div>
+    <div class="container5">
+        <div class="box7">🍔</div>
+        <div class="box8">🍟</div>
+    </div>
+
+<div class="inner">
+    
+        <div class="container6">
+            <div class="box11">🥩</div>
+        </div>
+        <div class="box9">🍖</div>
+        <div class="box10">🍗</div>
+       
+</div>
+
+</body>
+
+</html>

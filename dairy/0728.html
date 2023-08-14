@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0728 리뷰</title>
+    <link rel="stylesheet" href="0729.css">
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        ol+p{
+            background-color: lightseagreen;
+        }
+        ol+p+p{
+            background-color: lightslategray;
+        }
+        div p span{
+            background-color: lightcoral;
+        }
+        div>p>span{
+            background-color: lightsalmon;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>0728 리뷰</h1>
+    <h2>css cascading 우선순위</h2>
+    <ol>
+        <li>중요도
+            <p>태그안>헤드안>헤드-import>link>link-import>브라우저 디폴트 스타일</p>
+        </li>
+        <li>명시도
+            <p>인라인>id>class</p>
+        </li>
+        <li>선언순서
+            <p>어느줄에 먼저 썼냐</p>
+            <p>한줄 읽고 실행, 한줄 읽고 실행 -> 아래가 최종</p>
+        </li>
+    </ol>
+    <p>아이디 100 클래스 10 태그 1</p>
+    <p>공백과 >는 같은 순위</p>
+    <hr>
+    <h2>inherit_상속</h2>
+    <p>글씨 관련 속성들이 상속</p>
+    <p>border는 상속 안됨</p>
+    <p>initial : 초기화</p>
+    <p>inherit : 부모값을 상속 받음</p>
+    <h3>연습문제</h3>
+    <h4>1번</h4>
+
+    <div>
+        <h2>굴 이야기</h2> 
+        <p class="bgPage2">
+            일명 <span class="blueText">석화</span>라고도 하는데 멀리서 보면 따낸 굴조개 껍질이 바위면에 하얗게 붙어있어서 마치 <span class="blueText">꽃무더기</span>를 연상하게 한다. 굴은 <span class="blueText">3대 영양소</span>는 물론 비타민, 미네랄에 이르기까지 풍부한 영양분을 함유하고 있어서 완전식품인 우유와 별로 다를 바가 없다.
+        </p>
+    </div>
+    <p><a href="./0729test.html">연습1</a></p>
+    <P><a href="./0730test.html">연습2</a></P>
+    <p><a href="./0730test2.html">연습3</a></p>
+</body>
+
+</html>

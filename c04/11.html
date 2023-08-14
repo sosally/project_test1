@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            padding: 60px;
+        }
+        .rg1{
+            background: radial-gradient(closest-side at 35% 35%, red, yellow, blue);
+        }
+        .rg2{
+            background: radial-gradient(closest-corner at 35% 35%, red, yellow, blue);
+        }
+        .rg3{
+            background: radial-gradient(farthest-side at 35% 35%, red, yellow, blue);
+        }
+        .rg4{
+            background: radial-gradient(farthest-corner at 35% 35%, red, yellow, blue);
+        }
+        .rg5{
+            /*  gradient generator 써서 코드복사 */
+            background: linear-gradient(270deg, rgba(161,156,255,1) 0%, rgba(242,182,240,1) 27%, rgba(196,247,233,1) 45%, rgba(126,43,138,1) 59%, rgba(127,16,255,1) 100%);
+        }
+    </style>
+</head>
+<body>
+    <h1>radial-gradient</h1>
+    <p class="rg1"></p>
+    <p class="rg2"></p>
+    <p class="rg3"></p>
+    <p class="rg4"></p>
+    <p class="rg5"></p>
+</body>
+</html>

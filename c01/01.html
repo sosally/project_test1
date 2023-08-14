@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+    <style>
+        /* 태그선택자 */
+        p{
+            color: red;
+        }
+        /* 아이디선택자 */
+        #menu{
+            color: brown;
+        }
+        /* 클래스선택자 */
+        .junsu{
+            color: rgb(24, 138, 94);
+        }
+        *{
+            /* asterisk : html내 모든 태그 선택 */
+            /* *asterisk : 초기화코드 */
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.75;
+            list-style: none;
+            /* list style (-세부속성들 많은데 그건 줄임말임) */
+            /* 뒤에 세자리 같으면 가능 */
+        }
+        /* 하위/자손선택자 : 한칸띄는 것, 하위요소 선택 */
+        ul li{
+            font-size: 24px;
+        }
+        body p{
+            background-color: yellow;
+        }
+        li h3{
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- 태그선택자 -->
+    <p>
+        태그선택자
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, consequatur, corrupti, neque ad nostrum odio iste dolorum animi quia temporibus error non reiciendis fugiat numquam quos aliquid. Repellat, illum iusto?
+    </p>
+    <ul id="menu">
+        <li>아이디 선택자</li>
+        <li>아이디는 중복x</li>
+        <li>아이디는 문서에 하나만</li>
+        <li>복습하기</li>
+        <li>과제하기</li>
+    </ul>
+    <!-- ul#menu : id 자동입력 -->
+    <!-- h1.junsu : class 자동입력 -->
+    <!-- .soyoung : div로 자동생성 -->
+    <h1 class="junsu">
+        클래스선택자 / 중복사용 0
+
+    </h1>
+    <div>
+        전체선택자, sit amet consectetur adipisicing elit. Quidem perferendis nemo minus aut repellendus! Molestias laudantium quod, odit sapiente, nulla nihil dolore aperiam ad ipsum voluptatibus modi architecto iusto praesentium.
+    </div>
+    <hr>
+    <ul>
+        <li><h3>하위선택자</h3></li>
+        <li>sit amet consectetur</li>
+        <li>adipisicing elit.</li>
+        <li>At aut libero,</li>
+    </ul>
+</body>
+</html>

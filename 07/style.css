@@ -1,0 +1,78 @@
+/* ctrl tap : 문서간 이동 */
+/* css의 문자셋 지정 */
+/* 뭔가 빠지면 개발자도구에서 찾아라 */
+@charset "utf-8" ;
+
+/* 웹브라우저의 기본 여백 초기화 */
+/* 여백 설정 두가지 margin, padding */
+*{
+    margin: 0;
+    padding: 0;
+    /* 0은 단위 안써도 ㅇ */
+}
+/* 자식(하위)선택자 = > */
+body>* {
+    width: 900px;
+    padding: 20px;
+    background: rgb(218, 222, 235);
+    /* background : -뒤 속성 줄이고 사용 ㅇ */
+    text-align: center;
+    margin: auto;
+}
+
+/* 레이아웃을 바꾸고 싶으면 그 요소가 아니라 부모를 변경 */
+/* 복사할 수 있음 무조건 복사 */
+header{
+    display: flex;
+    /* 자식 좌우배치 */
+    height: 200px;
+    justify-content: space-between;
+    /* 박스 가로 균등분배 */
+    align-items: flex-end;
+    /* 아래 정렬 */
+}
+h1{
+    width: 200px;
+    height: 200px;
+    background-color: aliceblue;
+    line-height: 200px;
+}
+ul{
+    display: flex;
+    list-style: none;
+    width: 600px;
+    justify-content: center;
+}
+li{
+    width: 70px;
+    height: 60px;
+    line-height: 60px;
+    /* line-height : 줄간격 */
+}
+#container{
+    display: flex;
+    justify-content: space-between;
+}
+section{
+    background-color: rgb(161, 196, 193);
+    width: 300px;
+    height: 400px;
+    line-height: 400px;
+}
+/* section+div : section 다음에 오는 div 선택하기 */
+section+div{
+    display: flex;
+    flex-direction: column;
+}
+section+div>*{
+    height: 190px;
+    width: 200px;
+    background-color: rgb(195, 255, 235);
+}
+footer>*{
+    background-color: lightcyan;
+    width: 600px;
+    padding: 5px;
+    margin-left: 100px;
+    margin-top: 5px;
+}

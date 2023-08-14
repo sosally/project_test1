@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>table-cell</title>
+    <style>
+        p {
+            padding: 10px;
+            background-color: antiquewhite;
+        }
+        .valign1{
+            /* 수직중앙정렬 
+            1)문장 하나- 높이=라인하이트,  */
+            height: 100px;
+            line-height: 100px;
+        }
+        .valign2{
+            /* 반응형에는 height x padding o */
+            /* 2)여러줄- 위아래패딩 */
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+            /* 3)여러줄-table-cell, height, vertical-align */
+        .valign3{
+            display: table-cell;
+            height: 200px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>텍스트 수직 중앙정렬하기</h1>
+    <p class="valign1">잉여인간이 행복한 나라</p>
+    <p class="valign2">정부는 아이를 많이 낳으라고 하지만 그 아이들을 다 살릴 수도 없는 게 지금의 현실이다. 돈을 주는 것 외에 행복한 삶을 살도록 해주는 것이 선진국으로 가는 길일 것이다.
+    </p>
+    <p class="valign3">정부는 아이를 많이 낳으라고 하지만 그 아이들을 다 살릴 수도 없는 게 지금의 현실이다. 돈을 주는 것 외에 행복한 삶을 살도록 해주는 것이 선진국으로 가는 길일 것이다.
+    </p>
+</body>
+
+</html>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문단의 정렬</title>
+    <style>
+        /* 여백이 있어야 정렬 가능 */
+        p{
+            /* margin padding 은 본래 축약속성 */
+            /* 위아래 좌우 */
+
+            /* margin 병합현상 : 위아래 준건 하나로 병합함 */
+            margin: 10px 110px;
+            padding: 10px;
+            /* border 값 순서 상관 X */
+            border: 1px solid crimson;
+        }
+        .txt1{
+            /* 상하 margin 두 값 쓰면 큰 값 기준으로 적용! */
+            margin-bottom: 41px;
+            border-style: dotted;
+            border-width: 50px;
+            border-color: rgb(255, 167, 218);
+            /* 블록에 적용하면 '하위' 자식 인라인(글자들)이 정렬 -> 그러니까 p박스를 옮기고 싶으면 부모에 설정! */
+            text-align: left;
+        }
+        .txt2{
+            text-align: right;
+        }
+        .txt3{
+            text-align: center;
+            margin: 10px 150px 100px 200px;
+            border-width: 10px;
+        }
+        .txt4{
+            /* justify 양쪽정렬 */
+            text-align: justify;
+            border: 10px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <H1>문단의 정렬 : text-align</H1>
+    <p class="txt1">한국형 웹콘텐츠 접근성 지침 2.0은 원칙, 지침, 검사 항목의 3단계로 구성되어 있다. 본 지침을 준수할 경우 비장애인, 노인 등이 장애인, 젊은이 등과 동등하게 웹사이트에서
+        제공하는 콘텐츠를 인식하고 이를 운영하고 이해할 수 있게 되는 것이다</p>
+    <p class="txt2">한국형 웹콘텐츠 접근성 지침 2.0은 원칙, 지침, 검사 항목의 3단계로 구성되어 있다. 본 지침을 준수할 경우 비장애인, 노인 등이 장애인, 젊은이 등과 동등하게 웹사이트에서
+        제공하는 콘텐츠를 인식하고 이를 운영하고 이해할 수 있게 되는 것이다</p>
+    <p class="txt3">한국형 웹콘텐츠 접근성 지침 2.0은 원칙, 지침, 검사 항목의 3단계로 구성되어 있다. 본 지침을 준수할 경우 비장애인, 노인 등이 장애인, 젊은이 등과 동등하게 웹사이트에서
+        제공하는 콘텐츠를 인식하고 이를 운영하고 이해할 수 있게 되는 것이다</p>
+    <p class="txt4">한국형 웹콘텐츠 접근성 지침 2.0은 원칙, 지침, 검사 항목의 3단계로 구성되어 있다. 본 지침을 준수할 경우 비장애인, 노인 등이 장애인, 젊은이 등과 동등하게 웹사이트에서
+        제공하는 콘텐츠를 인식하고 이를 운영하고 이해할 수 있게 되는 것이다</p>
+</body>
+
+</html>

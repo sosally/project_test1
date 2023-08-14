@@ -1,0 +1,23 @@
+/* 부모는 컨테이너박스, 자식은 아이템박스 */
+
+/* 부모에게 선언해야 자식이 배치됨!!! */
+.container{
+    display: flex;
+}
+
+#opt1{
+    flex-wrap: nowrap;
+}
+
+/* 컨테이너보다 크면 자동 줄바꿈 */
+#opt2{
+    flex-wrap: wrap;
+}
+#opt3{
+    flex-wrap: wrap-reverse;
+}
+/* direction과 wrap을 한번에 */
+#opt4{
+    flex-flow: row wrap;
+    flex-flow: column nowrap;
+}

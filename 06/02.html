@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table{
+            border: 1px solid;
+        }
+        td{
+            border: 1px solid;
+        }
+        th{
+            border: 1px solid
+        }
+        body{
+            background-color: aliceblue;
+            color: darkblue;
+        }
+        .c1{
+            background-color: yellow;
+        }
+        .c2{
+            background-color: lightskyblue;
+        }
+        </style>
+</head>
+<body>
+    <!-- 컴퓨터는 세로로 읽지 못함 -->
+    <!-- table 도 css 로 꾸며줘야 선이 나타남! -->
+    <!-- tablerow : tr -->
+    <!-- tabledata : td -->
+    <hr>
+    <h1>수업내용</h1>
+    <table>
+        <!-- caption : 테이블의 제목을 의미 -->
+        <caption>소영의 코딩점수</caption>
+        <!-- column : 열 -->
+        <colgroup>
+            <!-- class 는 디자인 -->
+            <col class="c1">
+            <col class="c2">
+        </colgroup>
+        <!-- thead : 테이블 태그용 머릿말 -->
+        <thead>
+            <tr>
+                <!-- th : 제목컨텐츠에선 td 대신 th -->
+                <!-- css 에서도 th border 추가 -->
+                <th>교과목</th>
+                <th>점수</th>
+            </tr>
+        </thead>
+        <!-- tbody : 테이블 내 본문 -->
+        <tbody>
+            <tr>
+                <td>HTML</td>
+                <td>93</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>92</td>
+            </tr>
+        </tbody>
+        <!-- tfoot : 테이블 내 꼬리말 (위로 올려도 출력하면 아래로 나옴.)-->
+        <tfoot>
+            <tr>
+                <td>평균</td>
+                <td>92.5</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
+<!-- ctrl k ctrl 0 목록 전체 닫기 -->
+<!-- ctrl shift [ ] 열고 닫기-->
+<!-- 좌측 숫자 드래그 후 alt 위아래 -->

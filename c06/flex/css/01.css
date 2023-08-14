@@ -1,0 +1,27 @@
+/* 부모는 컨테이너박스, 자식은 아이템박스 */
+
+/* 부모에게 선언해야 자식이 배치됨!!! */
+.container{
+    display: flex;
+}
+/* 디스플레이는 상속 X, 바로 하위만!! */
+#opt1 .box:nth-child(1){
+    display: flex;
+}
+/* 방향 설정 */
+/* 좌 -> 우 */
+#opt1{
+    flex-direction: row; 
+}
+/* 우 -> 좌 */
+#opt2{
+    flex-direction: row-reverse;
+}
+/* 상 -> 하 */
+#opt3{
+    flex-direction: column;
+}
+/* 하 -> 상 */
+#opt4{
+    flex-direction: column-reverse;
+}

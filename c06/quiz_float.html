@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* css 는 공통속성 먼저 넣어야함!, 상단에 적힌 것들은 주로 공통속성 */
+        .cf::after{
+            /* 아무것도 없으니까 컨텐츠 넣어야 - css로 html에 가짜 컨텐츠 넣는 것 */
+            content: '';
+            /* content는 인라인이니 블럭으로~ */
+            display: block;
+            /* float 해제 */
+            clear: both;
+        }
+        .container{
+            background-color: rgb(193, 239, 255);
+            width: 700px;
+            height: 400px;
+            margin: 0 auto;
+            padding: 255px 146px;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        /* box 2번째 */
+        .container+.container{
+            background-color: lightpink;
+        }
+        /* 마지막은 아니야~ */
+        .box:nth-child(2):not(:last-child){
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container cf">
+        <div class="box fl"></div>
+        <div class="box fr"></div>
+    </div>
+    <div class="container cf">
+        <span class="box fl"></span>
+        <span class="box fl"></span>
+        <span class="box fr"></span>
+    </div>
+    <div class="container cf">
+        <span class="box fl"></span>
+        <span class="box fl"></span>
+        <span class="box fl"></span>
+        <span class="box fr"></span>
+    </div>
+</body>
+</html>

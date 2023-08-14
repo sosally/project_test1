@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 586px;
+            height: 736px;
+            background-color: lightgray;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #444;
+            font-family: Gmarket Sans;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .chips {
+            border-radius: 30px;
+            background: rgba(105, 81, 255, 0.23);
+            display: inline-flex;
+            padding: 8px 10px;
+            gap: 10px;
+            margin-top: 38px;
+            margin-bottom: 10px;
+            font-family: Gmarket Sans;
+            font-size: 12px;
+        }
+        .inner {
+            display: flex;
+            
+        }
+        .card1 {
+            background-color: #fff;
+            width: 240px;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
+            margin-right: 30px;
+        }
+
+        .card2 {
+            background-color: #fff;
+            width: 240px;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
+        }
+        .inner p {
+            color: #727272;
+            font-family: Gmarket Sans;
+            font-size: 12px;
+            line-height: 16px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 201px;
+        }
+
+        h2 {
+            font-family: Gmarket Sans;
+            font-size: 20px;
+            font-weight: 400;
+            
+        }
+
+        .text {
+            padding: 15px 20px 15px 19px;
+            width: 240px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My Gallery</h1>
+        <div class="chips">
+            <p>#개발</p>
+        </div>
+        <div class="inner">
+            <div class="card1">
+                <img src="./pic1.png" alt="개발자사진">
+                <div class="text">
+                    <h2>lorem</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="card2">
+                <img src="./pic2.png" alt="코드사진">
+                <div class="text">
+                    <h2>lorem</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
