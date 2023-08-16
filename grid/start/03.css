@@ -1,0 +1,13 @@
+#wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2,minmax(100px,auto));
+
+
+    /* 컬럼간격 - 동일하게만 가능*/
+    grid-column-gap: 30px;
+    /* 로우간격 */
+    grid-row-gap: 20px;
+    /* 축약속성 - row column */
+    grid-gap: 20px 30px;
+}

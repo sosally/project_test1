@@ -1,0 +1,58 @@
+html{
+    /* 반응형폰트
+    기본 16px -> 10px로 맞추기 */
+    /* 1rem은 16px 이므로 계산 복잡 -> 최상위 요소 기본폰트 10px로 지정하는 팁!  */
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #222;
+}
+h1{
+    border-bottom: 1px solid #ccc;
+}
+img{
+    max-width: 100%;
+    border-radius: 5px;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    /* grid-template-rows: repeat(auto,1fr); */
+    /* 담에 생기면 1로 계속~ */
+    grid-auto-rows:  1fr;
+}
+.image{
+    border-radius: 10px;
+    background-color: #333;
+    /* 반응형(가변크기)에선 패딩으로 테두리 주는게  좋음! -너비높이로 하면 컨텐츠(글) 잘리니까 */
+    padding: 10px;
+    margin: 5px;
+    
+    
+    color: #fff;
+    
+
+    /* 1번라인부터 한칸 */
+    grid-column: 1/span 1;
+    /* 한칸 쓰겠다.*/
+    grid-column: span 1;
+    
+}
+.image.wide{
+    /* 두칸 쓰겠다. */
+    grid-column: span 2;
+    
+}
+.image figcaption{
+    font-weight: bold;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    padding-top: 3px;
+}

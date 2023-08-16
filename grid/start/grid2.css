@@ -1,0 +1,38 @@
+#wrapper{
+    width: 700px;
+    display: grid;
+    /* 그리드 라인 생성 : grid template */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+}
+.box{
+    padding: 15px;
+    columns: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+.box1{
+    background-color: cornflowerblue;
+    /* 1 시작/ 4 끝 */
+    grid-column: 1/4;
+}
+.box2{
+    background-color: rgb(130, 241, 139);
+    grid-row: 2/4;
+
+    /* 1에서 시작(뒤에 어차피 밀고있으니) */
+    grid-column-start: 1;
+}
+.box3{
+    background-color: rgb(232, 243, 170);
+    
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+.box4{
+    background-color: rgb(255, 156, 222);
+    grid-column: 3/4;
+    grid-row: 3/4;
+}

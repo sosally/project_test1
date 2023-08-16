@@ -18,7 +18,7 @@
 }
 #box2{
     /* 단위쓰면 basis */
-    flex: 30px;
+    flex: 200px;
 }
 #box3{
     /* grow 2, shrink 3 */

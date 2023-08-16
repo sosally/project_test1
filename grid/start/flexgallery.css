@@ -1,0 +1,52 @@
+html{
+    /* 반응형폰트
+    기본 16px -> 10px로 맞추기 */
+    /* 1rem은 16px 이므로 계산 복잡 -> 최상위 요소 기본폰트 10px로 지정하는 팁!  */
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #222;
+}
+h1{
+    border-bottom: 1px solid #ccc;
+}
+img{
+    max-width: 100%;
+    border-radius: 5px;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.gallery{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+.image{
+    border-radius: 10px;
+    background-color: #333;
+    /* 반응형(가변크기)에선 패딩으로 테두리 주는게  좋음! -너비높이로 하면 컨텐츠(글) 잘리니까 */
+    padding: 10px;
+    margin: 5px;
+    /* grow(몇배로 키울지 shrink(모자랄때 몇배로 줄일지 basis(기본크기 */
+    flex: 1 1 300px;
+    color: #fff;
+    /* 그림글자 제어용 플렉스- 중첩해서 쓰는것 */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+}
+.image.wide{
+    /* 남는공간 두배, 400에서 늘어나기 시작. */
+    flex: 2 2 400px;
+}
+.image figcaption{
+    font-weight: bold;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    padding-top: 3px;
+}

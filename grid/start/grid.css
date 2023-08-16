@@ -1,0 +1,14 @@
+#wrapper1{
+    display: grid;
+    /* repeat(반복횟수, 반복값) */
+
+    /* auto- 남는 공간 어떻게 채울지 */
+    /* auto-fit : 무조건 화면 꽉 채움 */
+    /* auto-fill : 최소너비 까지만 채우고 그 뒤론 안채움 */
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    margin-bottom: 20px;
+}
+#wrapper2{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+}
