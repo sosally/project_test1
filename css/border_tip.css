@@ -38,3 +38,13 @@
     margin-left: -10px;
     /* 양쪽으로 10씩 들어가서 20px!!! */
 }
+.border_tip::before{
+    content: '';
+    border-left: 10px solid red;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    left: 105%;
+    bottom: 35%;
+    transform: translate();
+}

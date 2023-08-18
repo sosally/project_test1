@@ -1,4 +1,4 @@
-.wrap{
+/* .wrap{
     width: 100%;
 }
 .container{
@@ -23,4 +23,23 @@ header{
 footer{
     height: 100px;
     background-color: lightcoral;
+} */
+
+.wrap{
+    width: 100%;
+}
+.container{
+    max-width: 1180px;
+    width: 100%;
+    height: inherit;
+    background-color: aliceblue;
+    margin: auto;
+}
+header{
+    height: 100px;
+    background-color: antiquewhite;
+}
+.banner_wrap{
+    height: 100px;
+    background-color: cadetblue;
 }
