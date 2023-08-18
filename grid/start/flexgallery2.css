@@ -34,11 +34,7 @@ img{
     /* 반응형(가변크기)에선 패딩으로 테두리 주는게  좋음! -너비높이로 하면 컨텐츠(글) 잘리니까 */
     padding: 10px;
     margin: 5px;
-    
-    
     color: #fff;
-    
-
     /* 1번라인부터 한칸 */
     grid-column: 1/span 1;
     /* 한칸 쓰겠다.*/
@@ -48,7 +44,6 @@ img{
 .image.wide{
     /* 두칸 쓰겠다. */
     grid-column: span 2;
-    
 }
 .image figcaption{
     font-weight: bold;

@@ -1,0 +1,28 @@
+.wrap{
+    width: 1000px;
+    display: flex;
+}
+.side{
+    width: 30%;
+    height: 800px;
+    background-color: lightblue;
+}
+.container{
+    width: 70%;
+    height: 800px;
+}
+header{
+    width: 100%;
+    height: 40%;
+    background-color: rgb(204, 204, 116);
+}
+.contents{
+    width: 100%;
+    height: 40%;
+    background-color: lightgreen;
+}
+footer{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(79, 138, 79);
+}

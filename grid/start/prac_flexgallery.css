@@ -1,0 +1,42 @@
+
+html{
+    /* 반응형폰트
+    기본 16px -> 10px로 맞추기 */
+    /* 1rem은 16px 이므로 계산 복잡 -> 최상위 요소 기본폰트 10px로 지정하는 팁!  */
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #222;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,auto));
+    grid-auto-rows: 1fr;
+}
+.image{
+    grid-column: span 1;
+    background-color: black;
+    padding: 10px;
+    margin: 5px;
+    
+}
+.image.wide{
+    grid-column: span 2;
+}
+.image figcaption{
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    
+    padding-top: 3px;
+}
+img{
+    max-width: 100%;
+}

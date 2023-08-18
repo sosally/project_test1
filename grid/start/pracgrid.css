@@ -1,0 +1,12 @@
+#wrapper1{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    
+}
+#wrapper2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+}
+a{
+    grid-row: 1/2;
+}

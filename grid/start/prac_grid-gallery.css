@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+    
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px,1fr));
+    grid-gap: 1rem;
+    margin: 100px;
+}
+.card{
+    border: 1px solid rgb(143, 132, 121);
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px;
+}
+img{
+    max-width: 300px;
+}
