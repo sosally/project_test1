@@ -1,0 +1,11 @@
+.wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* header */
+header{
+    width: 100%;
+    
+}
