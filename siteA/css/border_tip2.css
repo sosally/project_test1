@@ -1,0 +1,39 @@
+.border_tip {
+    background-color: cornflowerblue;
+    position: relative;
+    width: 400px;
+    left: 50%;
+    top: 100px;
+    transform: translateX(calc(-400px /2));
+}
+
+.border_tip::before {
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgb(72, 243, 255);
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translateX(calc(-20px /2));
+}
+
+.border_tip::after {
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgb(255, 72, 72);
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(calc(-20px /2));
+}
+
+.border {
+    width: 1px;
+    height: 1px;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 10px solid black;
+}
