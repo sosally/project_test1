@@ -107,12 +107,66 @@ main {
     background-color: var(--text2);
 }
 
+/* quick */
+main .quick{
+position: fixed;
+right: 2rem;
+top: 2rem;
+width: 8.5rem;
+height: 22.5rem;
+background: var(--background);
+z-index: 2;
+}
+
+/* slide */
 main .slide {
     width: 100%;
     height: 400px;
-    background-color: var(--primary);
 }
-
+main .slide_wrap{
+    /* 부모랑 똑같이~ */
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+main .slide_wrap li{
+    /* 100주면 부모 높이로~ */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    background:no-repeat center center/cover;
+    transition: all 0.3s ease-in-out;
+}
+main .slide_wrap li.on{
+    opacity: 1;
+}
+main .slide_wrap li.slide1{
+    background-image: url(../images/banner_1.jpg);
+    /* 부모한테 중복되는거 백그라운드 넣었으니, 얘는 백그라운드-이미지로 */
+}
+main .slide_wrap li.slide2{
+    background-image: url(../images/banner_2.jpg);
+}
+main .slide_wrap li.slide3{
+    background-image: url(../images/banner_3.jpg);
+}
+main .slide_wrap li .textbox{
+    max-width: 50%;
+    text-align: center;
+    color: var(--background);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* %라 값 모를때 반절오게하기! */
+    background-color: rgba(0, 0, 0, .5);
+    padding: 2rem;
+}
+main .slide_wrap li .textbox span{
+    display: block;
+    padding: 1rem;
+}
 main .banner {
     width: 100%;
     height: 200px;

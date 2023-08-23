@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>full-size</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        html, body{height: 100%;}
+        /* 와이어프레임때문에 넣음, 상황봐서 수정하는거 */
+        /* 헤더,푸터 */
+        header, footer{
+            height: 50px;
+            line-height: 50px;
+            /* 라인하잇-장식으로 넣음(but 추후에 컨텐츠 넣을땐 높이,라인하이트 빼야!!) */
+            background: #bbb;
+            text-align: center;
+        }
+        /* 메인,네비 */
+        main{
+            height: calc(100% - 100px);
+            /* 컨텐츠 없는데 풀스크린 하고싶다 -100vh */
+            /* 전체-헤더50푸터50 */
+            margin: 0 auto;
+            /* 미디어쿼리 대비해서 미리, 지금은 의미 없음(메인이 100퍼니까) */
+            background: var(--primary);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        nav{
+            width: 100vw;
+            background: #444;
+            color: #fff;
+            padding: 10px;
+        }
+        section{
+            width: calc(100% - 150px);
+            /* -20%하고 옆에 20%줘도 ㅇㅋ, 너무 상대단위만 쓰면 머리 지진남.. */
+            background-color: #ccc;
+        }
+        aside{
+            width: 150px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <nav>nav</nav>
+    <main>
+        <section>section</section>
+        <aside>aside</aside>
+    </main>
+    <footer>footer</footer>
+</body>
+</html>

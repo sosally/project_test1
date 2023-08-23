@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 레이아웃</title>
+    <!-- 타이틀은 검색엔진에 반영 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        /* 그림 크게 들어간 레이아웃!! */
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            /* 컨테이너 너비보다 작아졌을때 줄바꿈(찌그러트리는거 x) */
+            justify-content: space-between;
+            /* 양끝 맞추고 중간애들 균등배치 */
+        }
+        .item{
+            flex-basis: calc(33.33% - 20px);
+            /* 행 하나에 박스 몇개 배치? - 여백값(패딩/마진때문에 떨어지지 않게 하려고) */
+            background: var(--primary);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .col2{
+            flex-basis: calc(100%);
+    
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+        </div>
+        <div class="container">
+            <!-- 박스 하나면? -->
+            <div class="item col2">item1</div>
+        </div>
+    </div>
+</body>
+</html>

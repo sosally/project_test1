@@ -9,7 +9,25 @@
                 $('.depth2').css('display','none');
                 $('header').removeClass('on');
             }
-        )
+        );
+        
+        // slide
+        // = : 할당연산자
+
+        const slides=$('.slide_wrap li')
+        let n = 0;
+        function slide(){
+            slides.removeClass('on');
+            slides.eq(n).addClass('on')
+            n++; //변수 +1
+            if(n>=slides.length){
+                n=0;
+            }
+        }
+        setInterval(() => {
+            slide();  
+        }, 3000);
+        slides.eq(n).addClass('on')
         // depth1.addEventListener('mouseover',function(){
         //     depth1.querySelectorAll('.depth2').forEach((o)=>{o.style.display='block'})
         //     document.querySelector('header').classList.add('on');
