@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.df {
+    display: flex;
+}
+
+.dn {
+    display: none;
+}
+
+.db {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+.inner {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* nav */
+nav {
+    width: 100%;
+    height: 50px;
+    
+    background: #b3b3b3;
+    padding-bottom: 0px;
+}
+
+.w100 {
+    height: 0;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    background-color: rgb(222, 150, 255);
+    transition: all 0.5s;
+    z-index: 11;
+}
+/* w100 없이 gnb 내려오게!! */
+nav:before{
+    content: '';
+    height: 0;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    background-color: rgb(222, 150, 255);
+    transition: all 0.5s;
+    z-index: 11;
+}
+
+.gnb {
+    display: flex;
+    position: relative;
+    z-index: 22;
+}
+
+.gnb a {
+    color: black;
+    display: block;
+    padding: 16px;
+}
+
+.gnb>li>a {
+    color: #c01587;
+}
+
+.gnb li {
+    width: 25%;
+    text-align: center;
+}
+
+.sub {
+    height: 0;
+    /* 컨텐츠 있으니 그래도 보임 */
+    overflow: hidden;
+    /* 이제 ㄹㅇ 안보임 */
+}
+
+.sub li {
+    width: 100%;
+    text-align: center;
+}
+.sub a {
+    color: white;
+}
+main {
+    position: relative;
+    top: 50px;
+}
+.gnb:hover .sub {
+    height: 100%;
+}
+
+nav:hover .w100 {
+    max-height: 30%;
+}
+nav:hover::before {
+    height: 30%;
+}
+

@@ -73,8 +73,6 @@ header nav ul.depth2 li a {
     display: inline-block;
     width: 20%;
 }
-
-
 header::before{
     content: '';
     display: block;
