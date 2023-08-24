@@ -36,13 +36,15 @@ header nav ul.depth1 li {
     position: relative;
     margin-bottom: 1rem;
 }
+
 header nav ul.depth1 li:not(:last-child) {
     margin-bottom: 1rem;
 }
+
 /* depth1,2 선택 */
 header nav ul li a {
     display: block;
-   
+
     color: var(--text1);
     transition: all 300ms;
     width: 20rem;
@@ -51,7 +53,7 @@ header nav ul li a {
     text-align: center;
 }
 
-header nav ul li:hover>a{
+header nav ul li:hover>a {
     color: var(--background);
     background-color: var(--secondary);
 }
@@ -73,7 +75,8 @@ header nav ul.depth2 li a {
     display: inline-block;
     width: 20%;
 }
-header::before{
+
+header::before {
     content: '';
     display: block;
     position: absolute;
@@ -84,16 +87,19 @@ header::before{
     top: 9rem;
     transition: all 0.3s;
 }
-header.on:before{
+
+header.on:before {
     width: 100%;
 }
+
 header .spotmenu {
     margin-top: 9.8rem;
     display: flex;
     padding: 1.1rem 3.9rem 1.1rem 3.8rem;
     justify-content: space-around;
 }
-.spotmenu a{
+
+.spotmenu a {
     display: block;
     color: var(--primary);
 }
@@ -102,18 +108,18 @@ header .spotmenu {
 main {
     width: 100%;
     max-width: calc(100% - 200px);
-    
+
 }
 
 /* quick */
-main .quick{
-position: fixed;
-right: 2rem;
-top: 2rem;
-width: 8.5rem;
-height: 22.5rem;
-background: var(--background);
-z-index: 2;
+main .quick {
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    width: 8.5rem;
+    height: 22.5rem;
+    background: var(--background);
+    z-index: 2;
 }
 
 /* slide */
@@ -121,35 +127,42 @@ main .slide {
     width: 100%;
     height: 400px;
 }
-main .slide_wrap{
+
+main .slide_wrap {
     /* 부모랑 똑같이~ */
     width: 100%;
     height: 400px;
     position: relative;
 }
-main .slide_wrap li{
+
+main .slide_wrap li {
     /* 100주면 부모 높이로~ */
     width: 100%;
     height: 100%;
     position: absolute;
     opacity: 0;
-    background:no-repeat center center/cover;
+    background: no-repeat center center/cover;
     transition: all 0.3s ease-in-out;
 }
-main .slide_wrap li.on{
+
+main .slide_wrap li.on {
     opacity: 1;
 }
-main .slide_wrap li.slide1{
+
+main .slide_wrap li.slide1 {
     background-image: url(../images/banner_1.jpg);
     /* 부모한테 중복되는거 백그라운드 넣었으니, 얘는 백그라운드-이미지로 */
 }
-main .slide_wrap li.slide2{
+
+main .slide_wrap li.slide2 {
     background-image: url(../images/banner_2.jpg);
 }
-main .slide_wrap li.slide3{
+
+main .slide_wrap li.slide3 {
     background-image: url(../images/banner_3.jpg);
 }
-main .slide_wrap li .textbox{
+
+main .slide_wrap li .textbox {
     max-width: 50%;
     text-align: center;
     color: var(--background);
@@ -161,10 +174,12 @@ main .slide_wrap li .textbox{
     background-color: rgba(0, 0, 0, .5);
     padding: 2rem;
 }
-main .slide_wrap li .textbox span{
+
+main .slide_wrap li .textbox span {
     display: block;
     padding: 1rem;
 }
+
 /* banner */
 main .banner {
     width: 100%;
@@ -173,47 +188,181 @@ main .banner {
     justify-content: center;
     align-items: center;
 }
-main .banner .inner{
+
+main .banner .inner {
     display: flex;
     max-width: 900px;
     max-height: 140px;
     justify-content: space-between;
     align-items: center;
 }
-main .banner .inner .row{
+
+main .banner .inner .row {
     display: flex;
     gap: 4rem;
 }
 
-main .banner .inner .thumbs{
+main .banner .inner .thumbs {
     flex: 0 1 14rem;
     height: 14rem;
     background: url(../images/banner_4.jpg);
 }
-main .banner .inner .textbox{
+
+main .banner .inner .textbox {
     flex: 0 1 57rem;
 }
-main .banner .inner p{
+
+main .banner .inner p {
     color: var(--text2);
     padding-top: 1rem;
 }
+
 main .board {
     width: 100%;
     height: 250px;
-    background-color: var(--text2);
+    padding: 1rem;
 }
-main .board .panels .panel1{
+
+main .board h2 {
+    position: absolute;
+    right: 50rem;
+    width: 20rem;
+    text-align: center;
+    line-height: 1.25;
+    color: #bcbcbc;
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+main .board .inner {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+main .board .row {
     display: flex;
+
 }
-main .board .panels .panel1 .panel1-1{
-    background-color: lightblue;
-    margin-right: 1rem;
+
+main .board .buttons li {
+    width: 9rem;
+    padding: 1rem;
+    text-align: center;
+    border: 2px solid var(--primary);
+    background-color: var(--background);
 }
-main .board .panels .panel1 .panel1-2{
-    background-color: rgb(170, 229, 147);
+
+main .board .buttons li.on {
+
+    background-color: var(--primary);
 }
+
+main .board .buttons li.on a {
+    color: var(--background);
+}
+
+main .board .panels {
+    width: 100%;
+    height: 18rem;
+    max-width: 50rem;
+    flex-direction: column;
+    position: relative;
+    border: 2px solid var(--primary);
+    border-top: none;
+}
+
+main .board .panels::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 17rem);
+    height: 2px;
+    background-color: var(--primary);
+    top: -2px;
+    right: -2px;
+}
+
+main .board .panels .row {
+    justify-content: space-between;
+}
+
+main .board .panels .row div {
+    padding: 0.8rem 4rem;
+}
+
+.panel1,
+.panel2 {
+    position: absolute;
+    height: 14rem;
+    width: 100%;
+}
+
+.panel2 .row li {
+    padding-top: 1rem;
+}
+
+.panel2 .row li img {
+    width: 100%;
+}
+
+.panel2 {
+    display: none;
+}
+
+/* popup */
+main .board .popup {
+    position: fixed;
+    z-index: 9999;
+    width: 50rem;
+    height: 30rem;
+    background: #ffffff url(../images/popupbg.png) no-repeat right bottom;
+    top: 50%;
+    left: 50%;
+    display: none;
+}
+
+main .popup .textbox {
+    position: absolute;
+    left: 5rem;
+    top: 4rem;
+}
+
+main .popup .textbox p {
+    padding: 0.25rem 0;
+}
+
+main .popup .h1 {
+    position: static;
+    width: 100%;
+    color: var(--primary);
+    font-size: 2.5rem;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+.popup .close {
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+}
+
 footer {
     width: 100%;
     height: 120px;
     background-color: var(--primary);
+}
+
+.overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+    display: none;
+}
+.overlay.open{
+    display: block;
 }
