@@ -102,7 +102,7 @@ header .spotmenu {
 main {
     width: 100%;
     max-width: calc(100% - 200px);
-    background-color: var(--text2);
+    
 }
 
 /* quick */
@@ -165,18 +165,53 @@ main .slide_wrap li .textbox span{
     display: block;
     padding: 1rem;
 }
+/* banner */
 main .banner {
     width: 100%;
     height: 200px;
-    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .banner .inner{
+    display: flex;
+    max-width: 900px;
+    max-height: 140px;
+    justify-content: space-between;
+    align-items: center;
+}
+main .banner .inner .row{
+    display: flex;
+    gap: 4rem;
 }
 
+main .banner .inner .thumbs{
+    flex: 0 1 14rem;
+    height: 14rem;
+    background: url(../images/banner_4.jpg);
+}
+main .banner .inner .textbox{
+    flex: 0 1 57rem;
+}
+main .banner .inner p{
+    color: var(--text2);
+    padding-top: 1rem;
+}
 main .board {
     width: 100%;
     height: 250px;
     background-color: var(--text2);
 }
-
+main .board .panels .panel1{
+    display: flex;
+}
+main .board .panels .panel1 .panel1-1{
+    background-color: lightblue;
+    margin-right: 1rem;
+}
+main .board .panels .panel1 .panel1-2{
+    background-color: rgb(170, 229, 147);
+}
 footer {
     width: 100%;
     height: 120px;

@@ -149,13 +149,14 @@ html {
 	overflow-y: scroll;
 	overflow-x: hidden;
 	font-size: 62.5%;
-	line-height: 1.75;
+	
 	font-weight: 400;
 }
 body {
 	font-family: 'pretendard', sans-serif;
 	color: var(--text1);
 	font-size: 1.6rem;
+	line-height: 1.75;
 }
 a {
 	text-decoration: none;

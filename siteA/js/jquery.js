@@ -26,7 +26,7 @@
         }
         setInterval(() => {
             slide();  
-        }, 3000);
+        }, 2000);
         slides.eq(n).addClass('on')
         // depth1.addEventListener('mouseover',function(){
         //     depth1.querySelectorAll('.depth2').forEach((o)=>{o.style.display='block'})
