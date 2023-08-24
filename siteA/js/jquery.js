@@ -47,7 +47,14 @@ $('.open').on('click',function(e){
     e.preventDefault();
     // $(.popup).css('display','block');
     $('.popup').show();
-})
+    $('.overlay').addClass('open');
+});
+$('.close').on('click',function(e){
+    e.preventDefault();
+    // $(.popup).css('display','block');
+    $('.popup').hide();
+    $('.overlay').removeClass('open');
+});
 
         // depth1.addEventListener('mouseover',function(){
         //     depth1.querySelectorAll('.depth2').forEach((o)=>{o.style.display='block'})
