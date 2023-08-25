@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+.wrap{
+    width: 100%;
+}
+nav{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: lightblue;
+}
+.inner{
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+.w100{
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: antiquewhite;
+    transition: all 0.5s;
+}
+.depth2{
+    
+    display: flex;
+    flex-wrap: row wrap;
+}
+.depth2 a{
+    opacity: 0;
+    transition: all 0.5s;
+}
+.gnb{
+    display: flex;
+}
+.gnb li{
+    flex-basis: 25%;
+}
+.gnb a{
+    display: block;
+    color: yellow;
+    
+}
+.gnb>li:hover .w100{
+    height: auto;
+    overflow: visible;
+}
+.gnb>li:hover .w100 a{
+    opacity: 1;
+}

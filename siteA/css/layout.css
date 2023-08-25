@@ -64,7 +64,9 @@ header nav ul.depth2 {
     right: -600px;
     width: 600px;
     /* left로 보내면 흔들림 */
-    display: none;
+    /* display: none; */
+    z-index: 99999999;
+    
 }
 
 header nav ul.depth2 li {
@@ -86,6 +88,9 @@ header::before {
     left: 200px;
     top: 9rem;
     transition: all 0.3s;
+    z-index: 9999999;
+    /* 간유리효과 */
+    backdrop-filter: blur(20px);
 }
 
 header.on:before {

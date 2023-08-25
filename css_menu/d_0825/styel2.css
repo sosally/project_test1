@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+/* common */
+.inner{
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+.w100{
+    width: 100%;
+    background-color: rgb(206, 161, 169);
+}
+/* nav */
+nav{
+    width: 100%;
+    background-color: cornflowerblue;
+    height: 50px;
+}
+.gnb{
+    display: flex;
+}
+/* 원투뎁스 li 다 */
+.gnb li{
+    height: 100%;
+}
+.gnb a{
+    display: block;
+    padding: 1rem;
+    color: aliceblue;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+.depth1>.w100{
+    overflow: hidden;
+    height: 0;
+}
+.depth1>a{
+    color: rgb(239, 255, 10);
+}
+.depth1:hover .w100{
+    height: auto;
+}
+/* 투뎁스 100% 드롭다운 */
+nav{
+    position: relative;
+}
+.depth1>.w100{
+    position: absolute;
+    left: 0;
+}
