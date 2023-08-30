@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .checkbox{
+        margin: 2em 0;
+       }
+       input.checkbox1{
+        font-size: 1em;
+        /* 폰트사이즈로 박스 조절 */
+        width: 1.25em;
+        height: 1.25em;
+        vertical-align: middle;
+       }
+       input.radiobox1{
+        font-size: 1em;
+        /* 폰트사이즈로 박스 조절 */
+        width: 1.25em;
+        height: 1.25em;
+        vertical-align: middle;
+       }
+       input.checkbox1+label{
+        font-size: 1.125em;
+        vertical-align: middle;
+       }
+       input.radiobox1+label{
+        font-size: 1.125em;
+        vertical-align: middle;
+       }
+    </style>
+</head>
+<body>
+    <form action="#" method="get">
+        <!-- label for, input id 연결 -->
+        <div class="checkbox">
+            <!-- 서버에 ~ name 카테고리 value 저장 값 -->
+            <input type="checkbox" name="check1" id="check1" value="1" class="checkbox1">
+            <label for="check1">큰체크박스</label>
+            <input type="radio" name="radio1" id="radio1" value="1" class="radiobox1">
+            <label for="radio1">큰라디오버튼</label>
+        </div>
+    </form>
+</body>
+</html>

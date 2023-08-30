@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .toggle{
+            position: relative;
+            display: inline-block;
+        }
+        .toggle input{
+            display: none;
+        }
+        .toggle label{
+            display: block;
+            width: 48px;
+            height: 24px;
+            text-indent: -250%;
+            /* 라벨테스트 선택차단 */
+            user-select: none;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <div class="toggle">
+            <input type="checkbox" name="toggle" id="toggle" value="ok">
+            <label for="toggle">스위치</label>
+        </div>
+    </form>
+</body>
+</html>

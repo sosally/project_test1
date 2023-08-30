@@ -8,18 +8,28 @@
     padding: 0;
     box-sizing: border-box;
 }
-ul,li,ol,dt,dd,dl{
+
+ul,
+li,
+ol,
+dt,
+dd,
+dl {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: #333;
     font-size: 1.6rem;
 }
-a:link, a:visited{
+
+a:link,
+a:visited {
     color: #333;
 }
-img{
+
+img {
     border: 0;
     vertical-align: top;
 }
@@ -28,76 +38,90 @@ html {
     overflow-y: scroll;
     font-size: 62.5%;
 }
-body{
+
+body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.6rem;
 }
 
 /* 상단메뉴바 */
-nav{
+nav {
     position: relative;
     width: 100%;
     height: 9.4rem;
     background-color: #ffffff;
     z-index: 2;
 }
-nav>.gnb{
+
+nav>.gnb {
     display: flex;
 }
-nav>.gnb li{
+
+nav>.gnb li {
     margin: 0 3.8rem;
 }
-nav>.gnb li.logo{
+
+nav>.gnb li.logo {
     width: 18rem;
     margin: 0 0 0 2.5rem;
 }
-nav>.gnb li.logo a{
+
+nav>.gnb li.logo a {
     display: block;
     background: url(./images/freesamLogo.jpg) no-repeat center center/18rem;
     text-indent: -9999999px;
     overflow: hidden;
     font-size: 0;
 }
-nav>.gnb li>a{
+
+nav>.gnb li>a {
     display: block;
     line-height: 9.4rem;
     font-weight: bold;
 }
-nav>.gnb li a:hover{
+
+nav>.gnb li a:hover {
     color: tomato;
 }
-nav>.gnb>li .menu_title img{
+
+nav>.gnb>li .menu_title img {
     width: 135px;
 }
+
 /* 투뎁스 레이아웃 */
-.gnb .dep1 ul{
+.gnb .dep1 ul {
     display: flex;
 }
-.gnb .dep1 li{
+
+.gnb .dep1 li {
     flex: 0 1 20rem;
     margin: 0;
     border-left: 1px solid #e9e9e9;
     padding-left: 2rem;
 }
-.gnb .dep1 li h2{
+
+.gnb .dep1 li h2 {
     font-size: 1.5em;
     font-weight: bold;
     text-align: center;
     color: tomato;
     padding-top: 0.2rem;
 }
-.gnb .dep1 li dl dt a{
+
+.gnb .dep1 li dl dt a {
     font-size: 1em;
     font-weight: bold;
     line-height: 1.8;
 }
-.gnb .dep1 li h3 a{
+
+.gnb .dep1 li h3 a {
     color: #097a84;
     font-weight: bold;
     line-height: 2;
     margin-bottom: 0.3rem;
 }
-.gnb .dep1 li dd a{
+
+.gnb .dep1 li dd a {
     color: #097a84;
     font-size: 0.8em;
     font-weight: 700;
@@ -106,7 +130,7 @@ nav>.gnb>li .menu_title img{
 
 /* depth2 배경 */
 
-nav .gnb_bg{
+nav .gnb_bg {
     position: absolute;
     background: #fbfbff;
     top: 9.4rem;
@@ -121,25 +145,75 @@ nav .gnb_bg{
 }
 
 /* hover */
-.gnb .dep1:hover .gnb_bg{
+.gnb .dep1:hover .gnb_bg {
     padding: 2rem 0;
     height: auto;
 }
-.gnb .dep1:hover .gnb_bg:before{
+
+.gnb .dep1:hover .gnb_bg:before {
     padding: 2rem 0;
 }
+
 /* main */
-main .main_banner{
+main .main_banner {
     height: 100vh;
     background: url(./images/child.jpg) no-repeat;
     background-size: cover;
     position: relative;
 
 }
-.main_banner ul{
+
+.main_banner ul {
     display: flex;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    gap: 1rem;
+}
+
+/* flex : grow shrink basis */
+.main_banner ul li {
+    position: relative;
+    flex: 1 1 30%;
+    height: 200px;
+    background: rgba(255, 255, 255, .5);
+    color: #fff;
+    text-align: center;
+    font-size: 4em;
+    line-height: 200px;
+    transition: margin 0.5s;
+    padding: 0 60px;
+    color: #464733;
+}
+
+.main_banner li:hover {
+    margin-top: -10px;
+}
+
+.main_banner li:after {
+    content: '🔍';
+    position: absolute;
+    left: -3PX;
+    top: -64PX;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.main_banner li:hover:after {
+    opacity: 1;
+}
+.main_banner li::before{
+    content: '';
+    width: 0%;
+    height: 12px;
+    position: absolute;
+    background: #464733;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.5s;
+}
+.main_banner li:hover::before{
+    width: 100%;
 }
