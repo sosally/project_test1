@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>클릭시 색상이 변경됩니다.</h1>
+    <script>
+        alert('반갑습니다.');
+        confirm('확인/취소 가능한 컨펌창입니다.');
+        prompt('메세지 입력 가능한 프롬프트 창입니다.');
+        prompt('메세지 입력 가능한 프롬프트 창입니다.','기본값입니다.');
+
+        document.write('<h2>이렇게 도큐멘트 안에 태그써서 글 만들 수 있고요.</h2>');
+        var pro = prompt('프롬프트 프로 창입니다. 닉네임을 입력하세요.');
+        document.write('<em>' + pro + '</em>님 환영합니다.')
+        var h1 = document.querySelector('h1');
+        h1.onclick = function(){
+            h1.style.color = 'red';
+        }
+    </script>
+</body>
+</html>

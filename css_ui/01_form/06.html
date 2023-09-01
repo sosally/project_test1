@@ -57,7 +57,8 @@
             // 변수 selectTarget의 값 변경시 할 일
             selectTarget.change(function(){
                 var selectName=$(this).children('option:selected').text();
-                alert(selectName)
+                
+                $(this).siblings('label').text(selectName);
             })
         })
     </script>

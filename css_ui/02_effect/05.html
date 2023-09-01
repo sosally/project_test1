@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .coloring {
+            background: rgb(161, 156, 255);
+            background: -moz-linear-gradient(270deg, rgba(161, 156, 255, 1) 0%, rgba(242, 182, 240, 1) 27%, rgba(196, 247, 233, 1) 45%, rgba(126, 43, 138, 1) 59%, rgba(127, 16, 255, 1) 100%);
+            background: -webkit-linear-gradient(270deg, rgba(161, 156, 255, 1) 0%, rgba(242, 182, 240, 1) 27%, rgba(196, 247, 233, 1) 45%, rgba(126, 43, 138, 1) 59%, rgba(127, 16, 255, 1) 100%);
+            background: linear-gradient(270deg, rgba(161, 156, 255, 1) 0%, rgba(242, 182, 240, 1) 27%, rgba(196, 247, 233, 1) 45%, rgba(126, 43, 138, 1) 59%, rgba(127, 16, 255, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a19cff", endColorstr="#7f10ff", GradientType=1);
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            transition: background 1s ease;
+            position: relative;
+        }
+
+        .coloring:hover {
+            background: rgb(161, 156, 255);
+            background: -moz-linear-gradient(270deg, rgba(161, 156, 255, 1) 0%, rgba(242, 241, 182, 1) 27%, rgba(196, 247, 233, 1) 45%, rgba(126, 43, 138, 1) 59%, rgba(127, 16, 255, 1) 100%);
+            background: -webkit-linear-gradient(270deg, rgba(161, 156, 255, 1) 0%, rgba(242, 241, 182, 1) 27%, rgba(196, 247, 233, 1) 45%, rgba(126, 43, 138, 1) 59%, rgba(127, 16, 255, 1) 100%);
+            background: linear-gradient(270deg, rgba(161, 156, 255, 1) 0%, rgba(242, 241, 182, 1) 27%, rgba(196, 247, 233, 1) 45%, rgba(126, 43, 138, 1) 59%, rgba(127, 16, 255, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a19cff", endColorstr="#7f10ff", GradientType=1);
+        }
+        div.box{
+            position: absolute;
+            left: 70px;
+            top: 70px;
+            width: 60px;
+            height: 60px;
+            background-color: #a00;
+            border: 5px solid pink;
+            box-shadow: 0 0 15px -5px rgba(0, 0, 0, .4);
+            border-radius: 35px;
+            animation: move 1s infinite alternate ease;
+        }
+        @keyframes move{
+            25%{
+                transform: translate(100px, 0px);
+            }
+            50%{
+                transform: translate(100px, 100px);
+            }
+            75%{
+                transform: translate(0px, 100px);
+            }
+            100%{
+                transform: translate(0px, 0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="coloring">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
