@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p>첫번째 단락</p>
+    </div>
+
+    <script>
+        let val = 10;
+        val += 1; //val = val+1
+        document.write(val);
+    </script>
+    <script>
+        // 복합대입연산자
+        const container = document.getElementById('container');
+        container.innerHTML += '<p>두번째 단락</p>' //추가후 재할당 (마치 장바구니!!), // 자바스크립트에서 만든 것. 동적요소
+    </script>
+    <script>
+        let list = '';
+        
+        list += '<ul>';
+        list += '<li>Javascript</li>';
+        list += '<li>Javascript</li>';
+        list += '<li>Javascript</li>';
+        list += '<li>Javascript</li>';
+        list += '</ul>';
+        console.log(list);
+        document.write(list);
+    </script>
+</body>
+</html>
