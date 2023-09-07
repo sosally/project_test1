@@ -4,7 +4,46 @@
     margin: 2em auto;
     position: relative;
 }
+img{
+    width: 100%;
+    
+}
+.bx-controls{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    
+}
+.bx-controls a{
+    background-color: #000;
+    font-size: 3em;
+}
+.img_ctl span a{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-indent: -99999999999999999px;
+}
+.img_ctl span.prev a{
+    background-image: url(images/left.png);
+}
+.img_ctl span.next a{
+    background-image: url(images/right.png);
+}
+.bx-pager{
+    display: flex;
+}
+.bx-controls{
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* .img_ctl a{
+    color: transparent;
+} */
 
-.sliderWrap img{
+/* 비디오크기 일괄적으로 맞추기 */
+.video_slides video{
     width: 100%;
 }
