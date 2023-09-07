@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let bus = 3000;
+        let food = 7000;
+        let drink = 2000;
+        let money = 30000;
+        // const result = (bus + food + drink) - money;
+        // document.write(`용돈이 ${result}원 초과되었습니다.`);
+        let total = bus + food + drink;
+        const result = (total > money) ? `${total - money}원 초과되었습니다.` : `돈관리 잘했어요!`
+        document.write(result);
+    </script>
+</body>
+</html>

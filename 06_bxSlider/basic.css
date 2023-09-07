@@ -1,0 +1,10 @@
+.sliderWrap{
+    width: 100%;
+    max-width: 960px;
+    margin: 2em auto;
+    position: relative;
+}
+
+.sliderWrap img{
+    width: 100%;
+}

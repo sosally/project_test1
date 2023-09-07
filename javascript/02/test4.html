@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let height = prompt('키를 입력하세요', '0');
+        let weight = prompt('몸무게를 입력하세요', '0');
+        let body = (height-100)*0.9;
+        const result = (weight >= body) ? '적정몸무게 이상' : '적정몸무게 미달';
+        document.write(result);
+    </script>
+</body>
+</html>

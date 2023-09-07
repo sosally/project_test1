@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 얘 없어도 움직이니, css는 가져오지 않는게 좋음. -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        // bx용 이름 붙이고 중복되지 않게!
+        $(document).ready(function () {
+            // $(".내요소").bxSlider();
+            $(".slider1").bxSlider({
+                mode: 'vertical', 
+                infiniteLoop: false, 
+                captions: true /* 이미지 내 title로 적기 */
+            });
+            $(".slider2").bxSlider();
+        });
+    </script>
+    <style>
+        .slider{
+            max-width: 50%;
+        }
+        /* 개발자모드에서 태그명 가져와서 */
+        .bx-wrapper{
+            max-width: 50% !important;
+        }
+        img{
+           width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider slider1">
+        <div><img src="./images/img-1.jpg" alt="" title="커피"></div>
+        <div><img src="./images/img-2.jpg" alt=""></div>
+        <div><img src="./images/img-3.jpg" alt=""></div>
+    </div>
+    <div class="slider slider2">
+        <div><img src="./images/img-1.jpg" alt=""></div>
+        <div><img src="./images/img-2.jpg" alt=""></div>
+        <div><img src="./images/img-3.jpg" alt=""></div>
+    </div>
+</body>
+
+</html>
