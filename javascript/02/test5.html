@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let all = prompt('총 입장객을 숫자로 입력하세요.');
+        let row = prompt('한줄에 앉을 인원수를 숫자로 입력하세요.');
+        
+        let result = all / row;
+        let result2 = (all / row) + 1;
+        let a = all % row;
+        
+        if(a == 0){
+        document.write(`<h1>${result}줄에 나눠서 앉으시면 됩니다.</h1>`);
+        } else{
+            document.write(`<h1>${result2}줄에 나눠서 앉으시면 됩니다.</h1>`);
+        }
+    </script> -->
+    <script>
+        let memNum = prompt('총 입장객을 숫자로 입력하세요.');
+        let colNum = prompt('한줄에 몇명씩 앉습니까?');
+        if (memNum % colNum === 0){
+            rowNum = (memNum / colNum);
+            document.write(`모두 ${rowNum}개의 줄이 필요합니다.`);
+        }else{
+            rowNum = (memNum / colNum) + 1;
+            document.write(`모두 ${parseInt(rowNum)}개의 줄이 필요합니다.`);
+
+        }
+    </script>
+</body>
+</html>

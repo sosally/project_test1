@@ -24,11 +24,11 @@
         const hour = date.getHours();
         console.log(hour);
         // 조건문
-        if (hour < 12){
+        if (12< hour <= 18){
             document.querySelector('body').style.backgroundColor = 'lightblue';
             document.querySelector('body').style.color = 'blue';
         }
-        if (hour >= 12){
+        if ( 24> hour >= 18){
             document.querySelector('body').style.backgroundColor = 'black';
             document.querySelector('body').style.color = 'white';
         }

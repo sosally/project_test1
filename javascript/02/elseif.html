@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const num = prompt('숫자를 입력하세요');
+        console.log(num); //확인
+
+        // if(num !== null){
+        //     if(num%3 === 0){
+        //         document.write(`${num}은 3의 배수입니다.`);
+        //     } else if(num%3 !== 0){
+        //     document.write(`${num}은 3의 배수가 아닙니다.`);
+        //     }
+        // } else {
+        //         alert('입력값이 없습니다. 숫자를 입력하세요');
+        //     }
+
+
+        // 3항 연산자로 변경
+            if(num !== null){
+                num%3 === 0 ? document.write(`${num}은 3의 배수입니다.`) : document.write(`${num}은 3의 배수가 아닙니다.`)
+            } else {
+                alert('입력값이 없습니다. 숫자를 입력하세요');
+            }
+
+
+        // if(num == null){
+        // document.write('null 입니다. 숫자를 입력하세요')
+        // }else if(num%3 === 0){
+        // document.write(`${num}은 3의 배수입니다.`);
+        // } else if(num%3 !== 0){
+        //     document.write(`${num}은 3의 배수가 아닙니다.`);
+        // }
+            
+    </script>
+</body>
+</html>
