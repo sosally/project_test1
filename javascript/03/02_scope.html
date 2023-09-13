@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sum; //전역변수
+        function addNumber(){
+            var sum = 10 + 20; //지역변수
+            console.log(sum);
+        }
+        addNumber();
+        console.log(sum); //지역변수라 여기선 안나옴. 
+        
+    </script>
+    <script>
+        var total;
+        var multiprint;
+        function add(){
+            var num = 10 + 20;
+            multi = 10 * 20; //함수 안에 있으나, 키워드 없이 식별자만 쓴 것은 함수 내에 있어도 전역변수!
+            total = num + multi;
+            multiprint = multi;
+        }
+        add(); //함수 호출을 해야 콘솔로 찍어서 함수안 변수 볼 수 있음.
+        console.log(multiprint);
+        document.write(`<h1>${total}</h1>`);
+    </script>
+</body>
+</html>

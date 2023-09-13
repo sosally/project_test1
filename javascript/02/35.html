@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 1.2em;
+            text-align: center;
+
+        }
+        p{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let i;
+        let userNum = parseInt(prompt('몇까지 3의 배수를 찾을까요?'));
+        let count = 0;
+        
+        if(userNum !== null || userNum !== NaN){
+            for(i = 1; i <= userNum; i++){
+                if(i % 3 === 0){
+                    count++;
+                    document.write(`${i},`);
+                }
+            }
+            document.write(`<p>${userNum}까지의 3의 배수의 갯수 ${count}</p>`)
+        }
+        else{
+            document.write('값을 입력하세요.');
+        }
+    </script>
+</body>
+</html>

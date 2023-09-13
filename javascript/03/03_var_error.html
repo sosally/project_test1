@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 호이스팅 : js에서 변수나 함수의 끌어올림 현상. 우선해석 현상.
+        // 스코프 : 변수, 함수의 유효범위.
+        // var, function : 선언적 함수. 호이스팅 발생.
+        // 왜쓰냐 ie 때문에..
+        var x = 10;
+        function displayNumber(){
+            console.log('x is ' + x);
+            
+            console.log('y is '+ y);
+            // var y = 20;
+            let y = 20;
+        }
+        displayNumber();
+
+        var a; // 선언
+        a = 1; //할당
+        
+
+        function sum(){
+            console.log(a+b);
+        }
+        var a = 2; // a변수 재선언 후 초기화.
+        function sum2(){
+            console.log(a += 1);
+        }
+    </script>
+</body>
+</html>
