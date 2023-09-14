@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1. 표현식 함수</h2>
+    <script>
+        //익명함수
+        const sum = function(a,b){
+            return console.log(a+b);
+        }
+        sum(5,8);
+    </script>
+
+    <h2>2. 즉시실행 함수 : 선언과 동시에 딱 한번 실행</h2>
+    
+    <script>
+        //매개변수 없는 경우
+        (function(){
+            // let userName = prompt('이름이 어떻게 되시나요?');
+            document.write(`안녕하세요! <span style='color:blue'>${userName}</span>님!`)
+        })/* () */
+        //매개변수 있는 경우
+        (function(a,b){
+            let sum1 = a+b;
+            
+        })(100,200)
+        document.write(`<h3>sum:실행결과:${sum1f}</h3>`);
+        
+    </script>
+
+    <h2>3. 화살표함수, 람다함수 : 익명함수를 줄여쓰는 방식</h2>
+    <!-- <script>
+
+        var hi = function(){
+            return '안녕하세요';
+        }
+        //ver1
+        var hi1 = () => {
+            return '안녕하세요';
+        }
+        //ver2 . 실행문 한줄일 때 중괄호, return 생략가능
+        var hi2 = () => '안녕하세요';
+        alert(hi());
+        alert(hi1());
+        alert(hi2());
+        
+    </script> -->
+    <script>
+        const hello1 = function(){
+            return alert('반갑습니다');
+        }
+        
+        const hello2 = () => {
+            return alert('반갑죠');
+        }
+
+        const hello3 = () => alert('반갑');
+        hello1();
+        hello2();
+        hello3();
+    </script>
+    <script>
+        //매개변수 하나
+        let hey = user => 
+            document.write(`${user}님 ㅎㅇ`);
+    //매개변수 괄호도 생략가능
+        hey('소영');
+    </script>
+    <script>
+        //매개변수 여러개
+        let some = (a,b) => document.write(`<h1>${a+b}</h1>`)
+        some('초코','라떼');
+    </script>
+</body>
+</html>

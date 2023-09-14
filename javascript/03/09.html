@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcSum(n){  
+            let sum = 0;   
+            for(let i = 1; i < n+1; i++){
+                sum += i;
+            }
+            return document.write(sum);
+        }
+        // calcSum(10);
+        let userNum = prompt('숫자를 입력하세요',10);
+
+        if(userNum !== null){
+            calcSum(Number(userNum));
+        }else{
+            alert('값 입력해주세용');
+        }
+         // 함수안에 도큐멘트 있으니까
+    </script>
+</body>
+</html>

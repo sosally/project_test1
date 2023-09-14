@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function addNum() {
+            const sum = 2 + 3;
+            console.log('이건 보이지?');
+            return sum;
+            console.log('보여?');
+        }
+        console.log(addNum());
+    </script>
+    <script>
+        document.write(`함수실행결과 : ${sum(2, 3)}\u00A0\u00A0\u00A0\u00A0${sum(2, 3)}`);
+
+        //선언적 함수
+        function sum(a, b) {
+            return a + b;
+            //return 다음에 적으면 안나옴.
+        }
+
+        // sum1(1,7);
+
+        //익명함수, 함수의 표현식
+        const sum1 = function (a, b) {
+            return a + b;
+            //return 다음에 적으면 안나옴.
+        }
+        document.write('❤',sum1(1,5));
+
+    </script>
+</body>
+
+</html>
