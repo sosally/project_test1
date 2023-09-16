@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const userNum = prompt('숫자를 입력하세요');
+        // if (userNum !== '') {
+        //     if (userNum % 4 == 0) {
+        //         document.write(userNum + '은 4의 배수입니다.')
+        //     } else {
+        //         document.write(userNum + '은 4의 배수가 아닙니다.')
+        //     }
+        // } else {
+        //     document.write('숫자를 적어주셔야 합니다.')
+        // }
+    </script>
+    <script>
+        const userNumber = prompt('숫자를 받겠습니다.')
+        if (userNumber !== '' || userNumber !== null) {
+            for (i = 1; i <= userNumber; i++) {
+                if (i % 3 == 0) {
+                    document.write(i+',')
+                }
+            }
+        } else {
+            document.write('숫자 입력하세여')
+        }
+    </script>
+</body>
+
+</html>
