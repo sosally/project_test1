@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>객체의 생성</h1>
+    <script>
+        let dog = new Object(); //객체를 만드는 함수
+        let cat = new Array(); //객체를 만드는 함수
+        console.log(dog);
+        console.log(cat);
+        dog = ['모찌', '3kg', '0']
+        cat = {
+            // key : value => 속성(property)
+            name : '모찌',
+            weight : '3kg',
+            age : '0살'
+        }
+        document.write(`<h1>${cat.name}</h1>`);
+        document.write(`<br><h1>${dog[0]}</h1>`);
+    </script>
+    <script>
+        const dev = {
+            name:'권소영',
+            skill:['javascript','html','css']
+        }
+        document.write(`<h1>${dev.skill[0]}</h1>`)
+    </script>
+    <script>
+        const moni = {
+            name: '모니',
+            eat:function(food, exer){
+                alert(`${this.name}는 ${food}를 냠냠`)
+                alert(`${this.name}야. 맛있게 먹었으면 ${exer}하러가자`)
+
+            }
+        }
+        moni.eat('츄르','산책');
+    </script>
+</body>
+</html>

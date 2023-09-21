@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link,
+        a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            width: 500px;
+            margin: 10px auto;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            width: 120px;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #result {
+            width: 500px;
+            height: 300px;
+            margin: 30px auto;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+        }
+
+        p {
+            width: 80%;
+            padding: 10px;
+            line-height: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM을 이용한 방식</h1>
+    <button id="change">change</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, dolore laboriosam porro optio suscipit quia
+        aliquam corporis iure commodi quasi, aspernatur sequi odit corrupti illo ipsam temporibus quaerat ratione
+        beatae.</p>
+    <script>
+        //1. 요소를 변수로 지정 후 미리 만든 함수 사용
+            //변수 선언하기
+            //const changeBttn = document.querySelector('#change');
+            
+            //changeBttn 값을 참조합니다.
+            //changeBttn.onclick = changeColor; //함수 호출시 ()없음! 실행이 아니니까.
+            function changeColor(){
+                document.querySelector('p').style.color = 'red';
+            }
+
+
+
+        //2. 요소를 바로 선택하고 미리 만든 함수 사용
+            //document.querySelector('#change').onclick = changeColor;
+        //3. 요소를 바로 선택하고 함수를 작성
+        document.querySelector('#change').onclick = function(){
+            document.querySelector('p').style.color('blue');
+        };
+
+    </script>
+</body>
+
+</html>

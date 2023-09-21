@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="console.log('html속성으로 버튼눌렀지');">🥗샐러드🥙</button>
+    <button class="sand">🌮신선한샌드위치🌯</button>
+    <button class="pie">🥧따뜻한파이</button>
+    
+    <script>
+        document.querySelector('.sand').onclick=function(){
+            console.log('dom으로 🌮신선한샌드위치🌯 버튼 눌렀지');
+        }
+        document.querySelector('.pie').addEventListener('click',function(){
+            console.log('🥧addEventListener로 버튼 눌렀지');
+        })
+    </script>
+</body>
+</html>

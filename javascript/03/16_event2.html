@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./16.css">
+</head>
+<body>
+    <ul>
+        <li><a href="#" onclick="changeBg('green','white')">Green</a></li>
+        <li><a href="#" onclick="changeBg('Orange','blue')">Orange</a></li>
+        <li><a href="#" onclick="changeBg('Purple','red')">Purple</a></li>
+    </ul>
+    <script>
+        function changeBg(color,font){
+            const body = document.querySelector('body');
+            body.style.backgroundColor=color;
+            body.querySelector('a').style.color=font;
+        }
+     
+    </script>
+</body>
+</html>

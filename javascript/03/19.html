@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>addEventListener</h1>
+    <h2>클릭횟수</h2>
+    <script>
+        let counter = 0;
+        document.querySelector('h2').addEventListener('click', function(){
+            counter++;
+            document.querySelector('h2').textContent = `클릭횟수 : ${counter}번입니다.`
+        })
+    </script>
+</body>
+</html>

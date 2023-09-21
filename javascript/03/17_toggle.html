@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #item {
+            position: relative;
+            width: 500px;
+            padding: 15px 20px;
+            margin: auto;
+
+        }
+
+        button {
+            background-color: rgba(255, 255, 255, .7);
+            padding: 5px;
+            border: 1px solid #ccc;
+            font-size: 0.8em;
+
+        }
+
+        .over {
+            position: absolute;
+            bottom: 30px;
+
+            left: 30px;
+        }
+
+        .detail {
+            width: 400px;
+            text-align: left;
+            line-height: 1.8;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="item">
+        <img src="http://qwerew.cafe24.com/images/1.jpg" alt="케익사진">
+        <button class="over" id="open" onclick="showDetail()">상세설명보기</button>
+        <div class="detail" id="desc" onclick="hideDetail()">
+            <h4>event handler</h4>
+            <p>event listener</p>
+            <button id="close">상세설명닫기</button>
+        </div>
+    </div>
+
+    <script>
+        const desc = document.querySelector('#desc');
+        const open = document.querySelector('#open');
+
+        function showDetail() {
+            desc.style.display = 'block'
+            open.style.display = 'none'
+        }
+        function hideDetail() {
+            desc.style.display = 'none'
+            open.style.display = 'block'
+        }
+    </script>
+</body>
+
+</html>
