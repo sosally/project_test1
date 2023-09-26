@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, li{
+    list-style: none;
+}
+/* main video */
+.main-video{
+    position: relative; /* 부모 렐러티브 : js로 정렬맞추려고*/
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* 스크롤 사라짐 */
+}
+.main-video video{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+}

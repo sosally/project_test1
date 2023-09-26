@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 300px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="./images/pet-1.jpg" alt="" id="img">
+    </div>
+    <script>
+        const img = document.querySelector('#img');
+        img.onclick = function(e){ //임의 매개변수 넣고
+            console.log(e.altKey); //e .뭐뭐
+            console.log(e.pageX); //e .뭐뭐
+        }
+    </script>
+</body>
+</html>

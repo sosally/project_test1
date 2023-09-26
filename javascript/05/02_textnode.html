@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			#four span {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="page">
+			<h1 id="header">textContent/innerText</h1>
+			<h2>망고의 쇼핑목록</h2>
+			<ul>
+				<li id="one" class="hot">
+					<em>삑삑공</em>
+				</li>
+				<li id="two" class="hot">연어간식</li>
+				<li id="three" class="hot">치즈껌</li>
+				<li id="four"><span>😀😀😀😀😀</span></li>
+			</ul>
+			<div id="scriptResults"></div>
+		</div>
+
+        <script>
+            //상수(변수) firstItem을 
+            const firstItem = document.querySelector('#one');
+
+            const showTextContent = firstItem.textContent;
+            console.log(showTextContent);
+
+            const showInnerText = firstItem.innerText;
+            console.log(showInnerText);
+
+            //동적요소 추가 : 요소준비 -> 추가
+            let msg = `<p>textContent : ${showTextContent}</p>`;
+            msg += `<p>innerText : ${showInnerText}</p>`; //덮어씌우기 아닌 추가할당
+            //추가할 기준요소 선택
+            let el = document.querySelector('#scriptResults');
+            //넣기
+            el.innerHTML = msg;
+      
+            //이모지 보이게
+            const text4 = document.querySelector('#four');
+            const text4Content = text4.textContent; //안보이는 것도 보이게
+            const text4Inner = text4.InnerTexts; //안보이는 것
+            console.log(text4Content);
+            console.log(text4Inner); //숨겨진것 반환x
+            el.innerHTML += text4Content
+            
+
+            const two = document.querySelector('#two');
+            two.textContent = '공주드레스';
+
+            document.querySelector('h2').innerHTML = '푸딩의 쇼핑목록';
+        </script>
+	</body>
+</html>

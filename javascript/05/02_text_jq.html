@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			#four span {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="page">
+			<h1 id="header">textContent/innerText</h1>
+			<h2>망고의 쇼핑목록</h2>
+			<ul>
+				<li id="one" class="hot">
+					<em>삑삑공</em>
+				</li>
+				<li id="two" class="hot">연어간식</li>
+				<li id="three" class="hot">치즈껌</li>
+				<li id="four"><span>😀😀😀😀😀</span></li>
+			</ul>
+			<div id="scriptResults"></div>
+		</div>
+		 <!-- snippet 코드의 조각 -->
+		 <!-- ctrl shift p -->
+		
+		<script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+        <script>
+           //이너텍스트 없음.
+			let firstItem = $('#one');
+			let showTextContent = firstItem.text();
+			console.log(showTextContent);
+
+			let msg = `<p>${showTextContent}</p>`
+			$('#scriptResults').html();
+
+			firstItem.text('바뀌죠');
+			console.log(firstItem.text());
+
+			let our = $('h2');
+			our.text('우리반 냥이😺');
+
+			$('#two').text('🥗');
+
+			$('#scriptResults').html('🍾🍷');
+        </script>
+		
+	</body>
+</html>
