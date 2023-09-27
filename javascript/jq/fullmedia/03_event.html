@@ -42,8 +42,59 @@
             display: none;
         }
     </style>
+    <script>
+        //window.onload=function(){}
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn1 = document.querySelector('#btn1');
+            // btn1.addEventListener('click', () => {
+            //     btn1.style.color = 'blue'
+            //  console.log(this);
+            // })
+            btn1.addEventListener('click', function () {
+                btn1.style.color = 'blue'
+                console.log(this);
+            })
+
+            const btn2 = document.querySelector('#btn2');
+            btn2.onmouseover = function () {
+                document.querySelector('#textZone').style.fontSize = '2em';
+            }
+            // btn2.addEventListener('mouseover', function(){
+            //     document.querySelector('#textZone').style.fontSize = '2em';
+            // })
+
+
+        })
+        // 이벤트함수를 화살표 함수로 작성시 this는 윈도우를 반환함
+    </script>
     <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
-    <script></script>
+    <script>
+        $(()=>{
+        //     const btn1 = $('#btn1');
+        //     btn1.on('click', () => {
+        //         $('#textZone').css('color','red')
+        //     })
+
+        //     const btn2 = $('#btn2');
+        //     btn2.on('mouseover', function(){
+        //         $('#textZone').css('backgroundColor','yellow');
+        //     })
+     
+        const btn3 = $('#btn3');
+        function textZone4() {
+            $('#textZone').css('color', 'green');
+            $('#textZone').css('fontWeight', 'blod');
+
+        }
+        // 이벤트/데이터바인딩 - 이벤트/데이터 여러개를 묶음
+        btn3.on(
+            {
+                mouseenter : function(){textZone4();},
+                click : function(){alert();}
+            }
+        )
+    })
+    </script>
 </head>
 
 <body>
